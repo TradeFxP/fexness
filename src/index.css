@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #ffe157;
+  --primary-dark: #d3a21a;
+  --primary-light: #fffbeb;
+  --accent: #fbbf24;
+  --bg: #ffffff;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --card-bg: #f9fafb;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.revealed { opacity: 1; transform: translateY(0); }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal-left.revealed { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal-right.revealed { opacity: 1; transform: translateX(0); }
+
+/* ---------- KEYFRAME ANIMATIONS ---------- */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.anim-fade-down { animation: fadeInDown 0.6s ease both; }
+.anim-fade-up   { animation: fadeInUp  0.7s ease both; }
+.anim-scale-in  { animation: scaleIn   0.5s ease both; }
+.anim-ticker    { animation: ticker 32s linear infinite; }
+.anim-ticker:hover { animation-play-state: paused; }
+
+/* ---------- BUTTONS ---------- */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+.btn-outline {
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.btn-outline:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* ---------- HELPERS ---------- */
+.bg-primary     { background-color: var(--primary); }
+.text-primary   { color: var(--primary); }
+.text-muted     { color: var(--muted); }
+.border-primary { border-color: var(--primary); }
+.hero-overlay   { background: linear-gradient(120deg, rgba(255,225,87,0.88) 30%, rgba(251,191,36,0.50) 100%); }
+
+/* Card hover lift */
+.card-hover {
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+.card-hover:hover {
+  box-shadow: 0 10px 28px rgba(255,225,87,0.18);
+  transform: translateY(-4px);
+}
