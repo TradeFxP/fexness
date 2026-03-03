@@ -32,3 +32,7 @@ jobs:
         tags: |
           registry.nafabarter.com/fexness:${{ github.sha }}
           registry.nafabarter.com/fexness:latest
+
+    - name: Redeploy Stack in Portainer
+      run: | 
+        curl -X POST -k https://89.116.20.215:9443/api/stacks/webhooks/3d0e08e4-b4ac-45fb-93ef-53fe7607f794?IMAGE_TAG=${{ github.sha }}
