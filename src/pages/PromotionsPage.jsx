@@ -102,7 +102,7 @@ export default function PromotionsPage() {
                       </li>
                     ))}
                   </ul>
-                  <a href="/register" className={`block text-center py-3 rounded-xl font-semibold text-sm transition-colors ${promo.highlight ? 'bg-gold-500 text-white hover:bg-gold-600' : 'border border-gold-500 text-gold-600 hover:bg-gold-50'}`}>
+                  <a href="https://portal.fexness.com/signup" className={`block text-center py-3 rounded-xl font-semibold text-sm transition-colors ${promo.highlight ? 'bg-gold-500 text-white hover:bg-gold-600' : 'border border-gold-500 text-gold-600 hover:bg-gold-50'}`}>
                     Claim Offer
                   </a>
                 </div>

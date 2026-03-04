@@ -219,7 +219,7 @@ export default function Accounts() {
             <a href="/contact" className="bg-white text-gold-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">
               Talk to an Expert
             </a>
-            <a href="/register" className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-all">
+            <a href="https://portal.fexness.com/signup" className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-all">
               Open Demo Account
             </a>
           </div>

@@ -43,7 +43,7 @@ export default function Login() {
         </form>
         <p className="text-center text-sm text-gray-500 mt-6">
           Do not have an account?{" "}
-          <Link to="/register" className="text-gold-600 font-semibold hover:underline">Create one free</Link>
+          <a href="https://portal.fexness.com/signup" className="text-gold-600 font-semibold hover:underline">Create one free</a>
         </p>
       </div>
     </div>

@@ -144,7 +144,7 @@ export default function CopyTrading() {
       <section className="bg-gold-600 text-white py-14 text-center">
         <h2 className="text-3xl font-bold mb-4">Start Copy Trading Today</h2>
         <p className="text-gold-100 mb-8">Join 18,000+ traders already copying the pros. No experience needed.</p>
-        <a href="/register" className="bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">Open Free Account</a>
+  <a href="https://portal.fexness.com/signup" className="bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">Open Free Account</a>
       </section>
     </div>
   )
