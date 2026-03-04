@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ShieldCheck, Zap, TrendingUp, Globe, Award, ArrowRight, CheckCircle, BarChart2, Target, RefreshCw, Edit3, Gauge, Eye, Activity } from 'lucide-react'
 
@@ -141,6 +141,22 @@ const PROMOTIONS = [
 
 
 export default function Home() {
+  useEffect(() => {
+    // Inject Tawk.to chat script
+    if (typeof window === 'undefined') return
+    window.Tawk_API = window.Tawk_API || {}
+    window.Tawk_LoadStart = new Date()
+    const s1 = document.createElement('script')
+    s1.type = 'text/javascript'
+    s1.async = true
+    s1.src = 'https://embed.tawk.to/69a81686eb951d1c3453ded3/1jis9fvq7'
+    s1.charset = 'UTF-8'
+    s1.setAttribute('crossorigin', '*')
+    document.body.appendChild(s1)
+    return () => {
+      try { document.body.removeChild(s1) } catch (e) { /* ignore */ }
+    }
+  }, [])
   return (
     <div>
       {/* Hero Section */}
