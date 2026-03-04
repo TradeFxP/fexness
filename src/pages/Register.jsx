@@ -75,7 +75,7 @@ export default function Register() {
         </form>
         <p className="text-center text-sm text-gray-500 mt-6">
           Already have an account?{" "}
-          <Link to="/login" className="text-gold-600 font-semibold hover:underline">Sign in</Link>
+          <a href="https://portal.fexness.com/login" className="text-gold-600 font-semibold hover:underline">Sign in</a>
         </p>
       </div>
     </div>

@@ -125,8 +125,8 @@ export default function Header() {
 
           {/* CTA buttons */}
           <div className="hidden lg:flex items-center gap-2">
-            <Link to="/login" className="px-4 py-2 rounded-lg text-sm font-semibold border-2 border-[#d3a21a] text-[#d3a21a] hover:bg-[#d3a21a] hover:text-white transition-colors">Sign In</Link>
-            <Link to="/register" className="px-4 py-2 rounded-lg text-sm font-semibold bg-[#d3a21a] text-white hover:bg-[#b8901a] transition-colors">Open Account</Link>
+            <a href="https://portal.fexness.com/login" className="px-4 py-2 rounded-lg text-sm font-semibold border-2 border-[#d3a21a] text-[#d3a21a] hover:bg-[#d3a21a] hover:text-white transition-colors">Sign In</a>
+            <a href="https://portal.fexness.com/signup" className="px-4 py-2 rounded-lg text-sm font-semibold bg-[#d3a21a] text-white hover:bg-[#b8901a] transition-colors">Signup</a>
           </div>
 
           {/* Mobile toggle */}
@@ -165,8 +165,8 @@ export default function Header() {
               </div>
             ))}
             <div className="pt-4 flex flex-col gap-2">
-              <Link to="/login" className="border-2 border-[#d3a21a] text-[#d3a21a] hover:bg-[#d3a21a] hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold">Sign In</Link>
-              <Link to="/register" className="bg-[#d3a21a] text-white hover:bg-[#b8901a] transition-colors text-center py-2 rounded-lg text-sm font-semibold">Open Account</Link>
+              <a href="https://portal.fexness.com/login" className="border-2 border-[#d3a21a] text-[#d3a21a] hover:bg-[#d3a21a] hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold">Sign In</a>
+              <a href="https://portal.fexness.com/signup" className="bg-[#d3a21a] text-white hover:bg-[#b8901a] transition-colors text-center py-2 rounded-lg text-sm font-semibold">Signup</a>
             </div>
           </div>
         </div>

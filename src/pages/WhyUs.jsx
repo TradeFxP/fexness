@@ -120,7 +120,7 @@ export default function WhyUs() {
           <h2 className="text-3xl font-bold mb-4">Ready to Experience the Difference?</h2>
           <p className="text-gold-100 mb-8">Open a live account in minutes with just $10 minimum deposit.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/register" className="bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">Open Account</a>
+            <a href="https://portal.fexness.com/signup" className="bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">Open Account</a>
             <a href="/contact" className="border border-white text-white font-semibold px-8 py-3 rounded-xl hover:bg-gold-700 transition-colors">Talk to Us</a>
           </div>
         </div>

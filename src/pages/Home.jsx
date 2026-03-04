@@ -159,12 +159,12 @@ export default function Home() {
                 Experience lightning-fast execution, advanced charting tools, and seamless multi-device access — powered by cutting-edge brokerage technology.
               </p>
               <div className="flex flex-wrap gap-4 mb-12">
-                <Link to="/register" className="bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold px-10 py-4 rounded-xl hover:from-gold-600 hover:to-gold-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2 text-lg">
+                <a href="https://portal.fexness.com/signup" className="bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold px-10 py-4 rounded-xl hover:from-gold-600 hover:to-gold-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2 text-lg">
                   Open Live Account <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link to="/demo" className="border-2 border-gold-600 text-gold-600 font-bold px-10 py-4 rounded-xl hover:bg-gold-50 transition-all text-lg">
+                </a>
+                <a href="https://portal.fexness.com/signup" className="border-2 border-gold-600 text-gold-600 font-bold px-10 py-4 rounded-xl hover:bg-gold-50 transition-all text-lg">
                   Try Free Demo
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -284,13 +284,13 @@ export default function Home() {
                   ))}
                 </div>
 
-                <Link to="/register" className={`block text-center py-3 rounded-xl font-bold transition-all ${
+                  <a href="https://portal.fexness.com/signup" className={`block text-center py-3 rounded-xl font-bold transition-all ${
                   account.popular 
                     ? 'bg-white text-gold-600 hover:bg-gray-100' 
                     : 'bg-gold-600 text-white hover:bg-gold-700'
                 }`}>
                   {account.buttonText}
-                </Link>
+                </a>
               </div>
             ))}
           </div>

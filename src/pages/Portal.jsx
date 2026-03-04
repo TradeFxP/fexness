@@ -82,10 +82,10 @@ export default function Portal() {
           <h2 className="text-3xl font-bold mb-4">Ready to Access Your Portal?</h2>
           <p className="text-gold-100 mb-8">Already a client? Log in to your secure client area. New here? Register in minutes.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/login" className="flex items-center gap-2 bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">
+            <a href="https://portal.fexness.com/login" className="flex items-center gap-2 bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">
               Sign In <ArrowRight className="w-4 h-4" />
             </a>
-            <a href="/register" className="flex items-center gap-2 border border-white text-white font-semibold px-8 py-3 rounded-xl hover:bg-gold-700 transition-colors">
+            <a href="https://portal.fexness.com/signup" className="flex items-center gap-2 border border-white text-white font-semibold px-8 py-3 rounded-xl hover:bg-gold-700 transition-colors">
               Create Account <ArrowRight className="w-4 h-4" />
             </a>
           </div>

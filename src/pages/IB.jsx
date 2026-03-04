@@ -120,7 +120,7 @@ export default function IB() {
       <section className="bg-gold-600 text-white py-14 text-center">
         <h2 className="text-3xl font-bold mb-4">Become a Fexness IB Today</h2>
         <p className="text-gold-100 mb-8">Join 5,000+ IBs worldwide already earning with us. No cap on earnings.</p>
-        <a href="/register" className="inline-flex items-center gap-2 bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">
+        <a href="https://portal.fexness.com/signup" className="inline-flex items-center gap-2 bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">
           Apply Now <ArrowRight className="w-4 h-4" />
         </a>
       </section>
