@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import {
   Menu, X, ChevronDown, Globe, BarChart2, BookOpen,
-  Wrench, Newspaper, HelpCircle, Phone, ShieldCheck, Users
+  Wrench, Newspaper, HelpCircle, Phone, ShieldCheck, Users, TrendingUp
 } from 'lucide-react'
 
 const NAV = [
@@ -37,9 +37,9 @@ const NAV = [
     items: [
       { label: 'Education Hub', to: '/education', icon: BookOpen },
       { label: 'Tools', to: '/tools', icon: Wrench },
-      { label: 'Research & News', to: '/research', icon: Newspaper },
       { label: 'Blog', to: '/blog', icon: Newspaper },
       { label: 'Copy Trading', to: '/copy-trading', icon: Users },
+      { label: 'Prop Trading', to: '/prop-trading', icon: TrendingUp },
     ]
   },
   {

@@ -1,8 +1,25 @@
 import React, { useState } from 'react'
-import { Copy, TrendingUp, Users, BarChart2, Star, CheckCircle } from 'lucide-react'
+import { Copy, TrendingUp, Users, BarChart2, Star, CheckCircle, Play } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import Section from '../components/Section'
 import useScrollReveal from '../hooks/useScrollReveal'
+
+const COPY_TRADING_VIDEOS = [
+  { 
+    id: 1, 
+    title: 'Copy Trading Basics & Getting Started', 
+    desc: 'Learn how copy trading works and how to start copying top traders',
+    videoSrc: '/videos/copy-trading/copy-trading-1.mp4',
+    thumbnail: 'https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=800&h=500&fit=crop'
+  },
+  { 
+    id: 2, 
+    title: 'Selecting the Right Traders to Copy', 
+    desc: 'Master the art of evaluating and choosing profitable traders',
+    videoSrc: '/videos/copy-trading/copy-trading-2.mp4',
+    thumbnail: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=500&fit=crop'
+  },
+]
 
 function RevealCard({ children, delay = 0 }) {
   const ref = useScrollReveal()
@@ -71,6 +88,47 @@ export default function CopyTrading() {
                 <div className="text-5xl font-bold text-gold-100 mb-2">{s.step}</div>
                 <h4 className="font-bold mb-2">{s.title}</h4>
                 <p className="text-gray-500 text-sm">{s.desc}</p>
+              </div>
+            </RevealCard>
+          ))}
+        </div>
+      </Section>
+
+      {/* Copy Trading Video Tutorials */}
+      <Section 
+        title="Copy Trading Video Tutorials" 
+        subtitle="Watch step-by-step guides to master copy trading and maximize your success."
+        className="bg-gradient-to-b from-white to-gray-50"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {COPY_TRADING_VIDEOS.map((video, i) => (
+            <RevealCard key={video.id} delay={i * 50}>
+              <div className="group rounded-xl overflow-hidden border border-gray-200 card-hover bg-white shadow-md hover:shadow-xl transition-all duration-300 flex flex-col h-full">
+                <div className="relative h-48 bg-gray-900 overflow-hidden flex-shrink-0">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster={video.thumbnail}
+                  >
+                    <source src={video.videoSrc} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                </div>
+                <div className="p-4 flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 text-white text-xs font-bold">
+                      {video.id}
+                    </div>
+                    <span className="text-xs text-blue-600 font-semibold uppercase tracking-wide">Video Tutorial</span>
+                  </div>
+                  <h3 className="font-bold text-base text-gray-900 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    {video.title}
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">
+                    {video.desc}
+                  </p>
+                </div>
               </div>
             </RevealCard>
           ))}
