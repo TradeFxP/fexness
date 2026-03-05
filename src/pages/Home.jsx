@@ -48,34 +48,87 @@ const ACCOUNT_TYPES = [
   {
     name: 'Classic Account',
     minDeposit: '$100',
-    leverage: 'Up to 1:300',
-    features: ['Competitive spreads', 'No commission'],
-    buttonText: 'Open Classic Account',
-    popular: false
+    leverage: '1:1000',
+    spreads: 'From 1.5 pips',
+    commission: 'No Commission',
+    minLot: '0.01',
+    swapFree: 'Not Swap Free',
+    markets: '7',
+    maxPositions: '200',
+    marginCall: '100%',
+    execution: 'Market Execution',
+    platforms: ['MetaTrader5', 'Mobile Application'],
+    depositFees: '0',
+    popular: false,
+    description: 'Perfect for beginners with competitive spreads and no commission fees.'
+  },
+  {
+    name: 'Standard Account',
+    minDeposit: '$500',
+    leverage: '1:1000',
+    spreads: 'From 2.0 pips',
+    commission: 'No Commission',
+    minLot: '0.01',
+    swapFree: 'Not Swap Free',
+    markets: '7',
+    maxPositions: '300',
+    marginCall: '100%',
+    execution: 'Market Execution',
+    platforms: ['MetaTrader5', 'Mobile Application'],
+    depositFees: '0',
+    popular: true,
+    description: 'Ideal for all traders with competitive spreads and no commission.'
   },
   {
     name: 'Premium Account',
-    minDeposit: '$1,000',
-    leverage: 'Up to 1:300',
-    features: ['Tighter spreads', 'Priority client support'],
-    buttonText: 'Open Premium Account',
-    popular: true
+    minDeposit: '$2,000',
+    leverage: '1:1000',
+    spreads: 'From 1.0 pips',
+    commission: 'No Commission',
+    minLot: '0.01',
+    swapFree: 'Not Swap Free',
+    markets: '7',
+    maxPositions: '300',
+    marginCall: '100%',
+    execution: 'Market Execution',
+    platforms: ['MetaTrader5', 'Mobile Application'],
+    depositFees: '0',
+    popular: false,
+    description: 'Advanced trading with tighter spreads and premium support.'
   },
   {
     name: 'ECN Account',
-    minDeposit: '$3,000',
-    leverage: 'Up to 1:100',
-    features: ['Raw spreads from 0.0 pips', 'Commission: $7 per lot'],
-    buttonText: 'Open ECN Account',
-    popular: false
+    minDeposit: '$5,000',
+    leverage: '1:1000',
+    spreads: 'From 0.0 pips',
+    commission: 'Available',
+    minLot: '0.1',
+    swapFree: 'Not Swap Free',
+    markets: '7',
+    maxPositions: '200',
+    marginCall: '100%',
+    execution: 'Market Execution',
+    platforms: ['MetaTrader5', 'Mobile Application'],
+    depositFees: '0',
+    popular: false,
+    description: 'Trade with raw spreads and ultra-fast ECN execution for professional-level pricing.'
   },
   {
-    name: 'Islamic Account (Swap-Free)',
-    minDeposit: '$100',
-    leverage: 'Up to 1:300',
-    features: ['No overnight swap charges', 'Transparent administrative fees may apply'],
-    buttonText: 'Open Islamic Account',
-    popular: false
+    name: 'Islamic Account',
+    minDeposit: '$10,000',
+    leverage: '1:500',
+    spreads: 'From 2.5 pips',
+    commission: 'No Commission',
+    minLot: '1',
+    swapFree: 'Islamic Swap Free',
+    markets: '7',
+    maxPositions: '300',
+    marginCall: '100%',
+    execution: 'Market Execution',
+    platforms: ['MetaTrader5', 'Mobile Application'],
+    depositFees: '0',
+    popular: false,
+    description: 'Trade without overnight swap fees, designed for experienced traders.'
   },
 ]
 
@@ -121,21 +174,21 @@ const SERVICES_TOOLS = [
 const PROMOTIONS = [
   {
     emoji: '🎁',
-    title: 'Welcome Trading Credit',
-    desc: 'Receive a trading credit on your first deposit to increase your initial trading capacity.',
-    features: ['Available on qualifying deposits', 'Subject to trading volume requirements', 'Terms & Conditions apply']
+    title: 'Welcome Trading Credit - 30% Bonus',
+    desc: 'Get 30% bonus on every deposit directly to your trading account.',
+    features: ['30% bonus on all deposits', 'Not withdrawable - can be lost in trading', 'Instant credit on deposit', 'Boost your trading capital']
   },
   {
     emoji: '💰',
     title: 'Deposit Reward Program',
-    desc: 'Boost your trading margin with periodic deposit-based trading incentives.',
-    features: ['Flexible participation', 'Transparent conditions', 'Designed to support active traders']
+    desc: 'Earn $100 trading bonus for every $2,000 deposit.',
+    features: ['$100 bonus per $2,000 deposit', 'Automatic bonus credit', 'Multiple deposits eligible', 'Use bonus for trading']
   },
   {
     emoji: '🏆',
     title: 'Loyalty & VIP Rewards',
-    desc: 'Our loyalty program recognizes active traders with exclusive benefits and personalized trading conditions.',
-    features: ['Dedicated account support', 'Customized trading conditions', 'Special promotional access']
+    desc: 'Trade actively and earn $500 bonus for every 500 lots traded.',
+    features: ['$500 per 500 lots traded', 'Automatic loyalty tracking', 'No maximum limit', 'Dedicated VIP support']
   },
 ]
 
@@ -260,52 +313,110 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-black text-gray-800 mb-4">Choose the Account That Fits Your Strategy</h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              We offer flexible account types designed for traders of all experience levels.
+              We offer 5 flexible account types designed for traders of all experience levels.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ACCOUNT_TYPES.map((account, i) => (
-              <div key={i} className={`rounded-2xl p-8 transition-all hover:-translate-y-2 ${
+              <div key={i} className={`rounded-2xl p-6 transition-all hover:-translate-y-2 ${
                 account.popular 
-                  ? 'bg-gradient-to-br from-gold-500 to-gold-600 text-white shadow-2xl relative' 
+                  ? 'bg-gradient-to-br from-gold-500 to-gold-600 text-white shadow-2xl relative border-4 border-gold-400' 
                   : 'bg-white border-2 border-gold-200 hover:border-gold-400 hover:shadow-xl'
               }`}>
                 {account.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 text-xs font-black px-4 py-1 rounded-full shadow-md">
-                    ⭐ POPULAR
+                    ⭐ MOST POPULAR
                   </div>
                 )}
-                <div className="text-center mb-6">
-                  <h3 className={`text-xl font-black mb-3 ${account.popular ? 'text-white' : 'text-gray-800'}`}>
+                
+                <div className="text-center mb-6 pt-2">
+                  <h3 className={`text-2xl font-black mb-2 ${account.popular ? 'text-white' : 'text-gray-800'}`}>
                     {account.name}
                   </h3>
-                  <div className={`text-sm font-semibold mb-3 ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>
-                    Minimum Deposit:
-                  </div>
-                  <div className={`text-4xl font-black mb-3 ${account.popular ? 'text-white' : 'text-gold-600'}`}>
-                    {account.minDeposit}
-                  </div>
-                  <div className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>
-                    Leverage: <span className={`font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.leverage}</span>
-                  </div>
+                  <p className={`text-sm mb-4 ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>
+                    {account.description}
+                  </p>
                 </div>
 
-                <div className="space-y-2 mb-8">
-                  {account.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <CheckCircle className={`w-4 h-4 flex-shrink-0 mt-0.5 ${account.popular ? 'text-gold-200' : 'text-gold-600'}`} />
-                      <span className={`text-sm ${account.popular ? 'text-white' : 'text-gray-700'}`}>{feature}</span>
+                <div className="space-y-3 mb-6">
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Spreads</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.spreads}</span>
+                  </div>
+                  
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Commission</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.commission}</span>
+                  </div>
+                  
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Min Deposit</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gold-600'}`}>{account.minDeposit}</span>
+                  </div>
+                  
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Min Lot Size</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.minLot}</span>
+                  </div>
+                  
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Max Leverage</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.leverage}</span>
+                  </div>
+                  
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Deposit Fees</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.depositFees}</span>
+                  </div>
+                  
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Swap Status</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.swapFree}</span>
+                  </div>
+                  
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Markets</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.markets}</span>
+                  </div>
+                  
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Max Positions</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.maxPositions}</span>
+                  </div>
+                  
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Margin Call</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.marginCall}</span>
+                  </div>
+                  
+                  <div className={`flex justify-between items-center pb-2 border-b ${account.popular ? 'border-gold-400' : 'border-gray-200'}`}>
+                    <span className={`text-sm font-semibold ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Execution</span>
+                    <span className={`text-sm font-bold ${account.popular ? 'text-white' : 'text-gray-800'}`}>{account.execution}</span>
+                  </div>
+                  
+                  <div className={`pt-2`}>
+                    <span className={`text-sm font-semibold block mb-2 ${account.popular ? 'text-gold-100' : 'text-gray-600'}`}>Platforms:</span>
+                    <div className="flex flex-wrap gap-2">
+                      {account.platforms.map((platform, idx) => (
+                        <span key={idx} className={`text-xs px-2 py-1 rounded-full font-semibold ${
+                          account.popular 
+                            ? 'bg-white text-gold-600' 
+                            : 'bg-gold-100 text-gold-700'
+                        }`}>
+                          {platform}
+                        </span>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
 
-                  <a href="https://portal.fexness.com/signup" className={`block text-center py-3 rounded-xl font-bold transition-all ${
+                <a href="https://portal.fexness.com/signup" className={`block text-center py-3 rounded-xl font-bold transition-all ${
                   account.popular 
-                    ? 'bg-white text-gold-600 hover:bg-gray-100' 
+                    ? 'bg-white text-gold-600 hover:bg-gray-100 shadow-lg' 
                     : 'bg-gold-600 text-white hover:bg-gold-700'
                 }`}>
-                  {account.buttonText}
+                  Open Account →
                 </a>
               </div>
             ))}

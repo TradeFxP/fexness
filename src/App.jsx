@@ -23,6 +23,7 @@ import Tools from './pages/Tools'
 import Research from './pages/Research'
 import Blog from './pages/Blog'
 import CopyTrading from './pages/CopyTrading'
+import PropTrading from './pages/PropTrading'
 import SupportPage from './pages/SupportPage'
 import FAQ from './pages/FAQ'
 import Legal from './pages/Legal'
@@ -61,6 +62,7 @@ export default function App() {
           <Route path="/research" element={<Research />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/copy-trading" element={<CopyTrading />} />
+          <Route path="/prop-trading" element={<PropTrading />} />
           <Route path="/support" element={<SupportPage />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/legal" element={<Legal />} />
