@@ -11,7 +11,6 @@ const NAV = [
     items: [
       { label: 'Markets', to: '/markets', icon: Globe },
       { label: 'Platforms', to: '/platforms', icon: BarChart2 },
-      { label: 'Account Types', to: '/accounts', icon: Users },
       { label: 'Pricing & Spreads', to: '/pricing', icon: BarChart2 },
       { label: 'Leverage & Margin', to: '/leverage', icon: BarChart2 },
     ]
