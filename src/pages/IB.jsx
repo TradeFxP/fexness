@@ -15,9 +15,9 @@ function RevealCard({ children, delay = 0 }) {
 
 const TIERS = [
   { name: 'Bronze IB', clients: '1–10', commission: '$5/lot', bonus: '—', color: 'bg-orange-50 border-orange-200' },
-  { name: 'Silver IB', clients: '11–30', commission: '$7/lot', bonus: '+$200 bonus', color: 'bg-gray-50 border-gray-200' },
-  { name: 'Gold IB', clients: '31–80', commission: '$9/lot', bonus: '+$500 bonus', color: 'bg-yellow-50 border-yellow-200' },
-  { name: 'Platinum IB', clients: '81+', commission: '$12/lot', bonus: '+$1,500 bonus', color: 'bg-gold-50 border-gold-300' },
+  { name: 'Silver IB', clients: '11–30', commission: '$7/lot', bonus: '+$200 <span class="font-bold">bonus</span>', color: 'bg-gray-50 border-gray-200' },
+  { name: 'Gold IB', clients: '31–80', commission: '$9/lot', bonus: '+$500 <span class="font-bold">bonus</span>', color: 'bg-yellow-50 border-yellow-200' },
+  { name: 'Platinum IB', clients: '81+', commission: '$12/lot', bonus: '+$1,500 <span class="font-bold">bonus</span>', color: 'bg-gold-50 border-gold-300' },
 ]
 
 const STEPS = [
@@ -69,7 +69,7 @@ export default function IB() {
                 <div className="text-2xl font-bold text-gold-600 mb-1">{tier.commission}</div>
                 <div className="text-sm text-gray-500 mb-3">per standard lot</div>
                 {tier.bonus !== '—' && (
-                  <span className="bg-gold-500 text-white text-xs font-bold px-3 py-1 rounded-full">{tier.bonus}</span>
+                  <span className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md" dangerouslySetInnerHTML={{ __html: tier.bonus }}></span>
                 )}
               </div>
             </RevealCard>

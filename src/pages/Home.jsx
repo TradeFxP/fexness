@@ -46,7 +46,7 @@ const TRADING_INSTRUMENTS = [
 
 const ACCOUNT_TYPES = [
   {
-    name: 'Classic Account',
+    name: 'Classic',
     minDeposit: '$100',
     leverage: '1:1000',
     spreads: 'From 1.5 pips',
@@ -63,7 +63,7 @@ const ACCOUNT_TYPES = [
     description: 'Perfect for beginners with competitive spreads and no commission fees.'
   },
   {
-    name: 'Standard Account',
+    name: 'Standard',
     minDeposit: '$500',
     leverage: '1:1000',
     spreads: 'From 2.0 pips',
@@ -80,7 +80,7 @@ const ACCOUNT_TYPES = [
     description: 'Ideal for all traders with competitive spreads and no commission.'
   },
   {
-    name: 'Premium Account',
+    name: 'Premium',
     minDeposit: '$2,000',
     leverage: '1:1000',
     spreads: 'From 1.0 pips',
@@ -97,7 +97,7 @@ const ACCOUNT_TYPES = [
     description: 'Advanced trading with tighter spreads and premium support.'
   },
   {
-    name: 'ECN Account',
+    name: 'ECN',
     minDeposit: '$5,000',
     leverage: '1:1000',
     spreads: 'From 0.0 pips',
@@ -114,7 +114,7 @@ const ACCOUNT_TYPES = [
     description: 'Trade with raw spreads and ultra-fast ECN execution for professional-level pricing.'
   },
   {
-    name: 'Islamic Account',
+    name: 'Islamic',
     minDeposit: '$10,000',
     leverage: '1:500',
     spreads: 'From 2.5 pips',
@@ -129,6 +129,23 @@ const ACCOUNT_TYPES = [
     depositFees: '0',
     popular: false,
     description: 'Trade without overnight swap fees, designed for experienced traders.'
+  },
+  {
+    name: 'Platinum',
+    minDeposit: '$25,000',
+    leverage: '1:500',
+    spreads: 'From 0.0 pips',
+    commission: 'Lowest Available',
+    minLot: '0.1',
+    swapFree: 'Available on Request',
+    markets: '7',
+    maxPositions: '500',
+    marginCall: '100%',
+    execution: 'Priority Execution',
+    platforms: ['MetaTrader5', 'Mobile Application', 'Dedicated Account Manager'],
+    depositFees: '0',
+    popular: false,
+    description: 'Premium tier with exclusive benefits, priority execution, and personalized support.'
   },
 ]
 
@@ -176,19 +193,19 @@ const PROMOTIONS = [
     emoji: '🎁',
     title: 'Welcome Trading Credit - 30% Bonus',
     desc: 'Get 30% bonus on every deposit directly to your trading account.',
-    features: ['30% bonus on all deposits', 'Not withdrawable - can be lost in trading', 'Instant credit on deposit', 'Boost your trading capital']
+    features: ['<span class="font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded">30% bonus</span> on all deposits', 'Not withdrawable - can be lost in trading', 'Instant credit on deposit', 'Boost your trading capital']
   },
   {
     emoji: '💰',
     title: 'Deposit Reward Program',
     desc: 'Earn $100 trading bonus for every $2,000 deposit.',
-    features: ['$100 bonus per $2,000 deposit', 'Automatic bonus credit', 'Multiple deposits eligible', 'Use bonus for trading']
+    features: ['<span class="font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded">$100 bonus</span> per $2,000 deposit', 'Automatic bonus credit', 'Multiple deposits eligible', 'Use bonus for trading']
   },
   {
     emoji: '🏆',
     title: 'Loyalty & VIP Rewards',
     desc: 'Trade actively and earn $500 bonus for every 500 lots traded.',
-    features: ['$500 per 500 lots traded', 'Automatic loyalty tracking', 'No maximum limit', 'Dedicated VIP support']
+    features: ['<span class="font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded">$500</span> per 500 lots traded', 'Automatic loyalty tracking', 'No maximum limit', 'Dedicated VIP support']
   },
 ]
 
@@ -476,7 +493,7 @@ export default function Home() {
                   {promo.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-2 text-left">
                       <span className="text-gold-600 font-bold">•</span>
-                      <span className="text-gray-700 text-sm">{feature}</span>
+                      <span className="text-gray-700 text-sm" dangerouslySetInnerHTML={{ __html: feature }}></span>
                     </div>
                   ))}
                 </div>
@@ -529,13 +546,13 @@ export default function Home() {
             <div className="space-y-6 leading-relaxed">
               <div className="bg-white rounded-3xl p-8 border-2 border-gold-200 hover:border-gold-500 transition-all duration-300 hover:shadow-2xl shadow-lg">
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
-                  Founded with a vision to <span className="text-gold-600 font-bold">democratize forex trading</span>, Fexness emerged from a simple belief: every trader deserves access to professional-grade tools, transparent pricing, and exceptional support.
+                  Founded with a vision to <span className="text-gold-600 font-bold">democratize</span> <span className="text-gray-900 font-bold">Forex trading</span>, Fexness emerged from a simple belief: every trader deserves access to professional-grade tools, transparent pricing, and exceptional support.
                 </p>
               </div>
               
               <div className="bg-white rounded-3xl p-8 border-2 border-gold-200 hover:border-gold-500 transition-all duration-300 hover:shadow-2xl shadow-lg">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  What started as a mission to provide zero-spread trading has evolved into a <span className="text-gold-600 font-bold">comprehensive trading ecosystem</span>. Today, we serve traders across 175 countries, offering access to 100+ instruments with lightning-fast execution and industry-leading technology.
+                  What started as a mission to provide zero-spread trading has evolved into a <span className="text-gold-600 font-bold">comprehensive</span> <span className="text-gray-900 font-bold">Trading ecosystem</span>. Today, we serve traders across 175 countries, offering access to 100+ instruments with lightning-fast execution and industry-leading technology.
                 </p>
               </div>
               
@@ -708,6 +725,21 @@ export default function Home() {
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Suitable for All Trader Levels</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Whether you are a beginner or an experienced professional, Fexness offers account types and tools designed to meet various trading strategies.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Reason 9 */}
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-gold-500 hover:-translate-y-2">
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  9
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Ultra-fast Execution</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Trades are processed in milliseconds through high-performance servers and optimized liquidity routing.
                   </p>
                 </div>
               </div>

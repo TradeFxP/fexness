@@ -5,7 +5,7 @@ import Section from '../components/Section'
 import useScrollReveal from '../hooks/useScrollReveal'
 
 const COURSES = [
-  { icon: BookOpen, title: 'Basic Financial Trading', lessons: 11, desc: 'Learn the fundamentals of financial markets and trading basics.', img: 'https://picsum.photos/seed/edu1/800/500' },
+  { icon: BookOpen, title: 'Basic Financial Trading', lessons: 12, desc: 'Learn the fundamentals of financial markets and trading basics.', img: 'https://picsum.photos/seed/edu1/800/500' },
   { icon: TrendingUp, title: 'Technical Analysis', lessons: 4, desc: 'Support & resistance, indicators, candlestick patterns.', img: 'https://picsum.photos/seed/edu2/800/500' },
   { icon: FileText, title: 'Trading Psychology', lessons: 4, desc: 'Master the mental game and emotional control in trading.', img: 'https://picsum.photos/seed/edu3/800/500' },
   { icon: Users, title: 'Copy Trading', lessons: 2, desc: 'Learn to copy successful traders and maximize profits.', img: 'https://picsum.photos/seed/edu4/800/500' },
@@ -99,6 +99,14 @@ const BASIC_TRADING_VIDEOS = [
     desc: 'Create a solid trading plan for consistent results',
     videoSrc: '/videos/basic-trading/basic-trading-11.mp4',
     thumbnail: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=500&fit=crop',
+    available: true
+  },
+  { 
+    id: 12, 
+    title: 'Advanced Trading Concepts', 
+    desc: 'Take your trading to the next level with advanced strategies',
+    videoSrc: '/videos/basic-trading/basic-trading-12.mp4',
+    thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop',
     available: true
   },
 ]
@@ -212,7 +220,7 @@ export default function Education() {
 
       {/* Basic Financial Trading Video Section */}
       <Section 
-        title="Basic Financial Trading Course" 
+        title="Basic Financial Trading" 
         subtitle="Start your trading journey with fundamental concepts and essential trading knowledge."
         className="bg-gradient-to-b from-gray-50 to-white"
       >
@@ -262,7 +270,7 @@ export default function Education() {
 
       {/* Technical Analysis Video Section */}
       <Section 
-        title="Technical Analysis Video Course" 
+        title="Technical Analysis" 
         subtitle="Watch our comprehensive video tutorials and master technical analysis step by step."
         className="bg-gradient-to-b from-white to-gray-50"
       >
@@ -303,7 +311,7 @@ export default function Education() {
 
       {/* Trading Psychology Video Section */}
       <Section 
-        title="Trading Psychology Video Course" 
+        title="Trading Psychology" 
         subtitle="Master the mental game of trading and develop the mindset of successful traders."
         className="bg-gradient-to-b from-gray-50 to-white"
       >
@@ -344,7 +352,7 @@ export default function Education() {
 
       {/* Copy Trading Video Section */}
       <Section 
-        title="Copy Trading Video Course" 
+        title="Copy Trading" 
         subtitle="Learn how to leverage the expertise of successful traders through copy trading."
         className="bg-gradient-to-b from-white to-gray-50"
       >
@@ -385,7 +393,7 @@ export default function Education() {
 
       {/* Prop Trading Video Section */}
       <Section 
-        title="Prop Trading Video Course" 
+        title="Prop Trading" 
         subtitle="Discover how to trade with firm capital and become a funded professional trader."
         className="bg-gradient-to-b from-gray-50 to-white"
       >
