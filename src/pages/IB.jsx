@@ -16,7 +16,7 @@ function RevealCard({ children, delay = 0 }) {
 const TIERS = [
   { name: 'Bronze IB', clients: '1–10', commission: '$5/lot', bonus: '—', color: 'bg-orange-50 border-orange-200' },
   { name: 'Silver IB', clients: '11–30', commission: '$7/lot', bonus: '+$200 <span class="font-bold">bonus</span>', color: 'bg-gray-50 border-gray-200' },
-  { name: 'Gold IB', clients: '31–80', commission: '$9/lot', bonus: '+$500 <span class="font-bold">bonus</span>', color: 'bg-yellow-50 border-yellow-200' },
+  { name: 'Gold IB', clients: '31–80', commission: '$9/lot', bonus: '+$500 <span class="font-bold">bonus</span>', color: 'bg-amber-50 border-amber-300' },
   { name: 'Platinum IB', clients: '81+', commission: '$12/lot', bonus: '+$1,500 <span class="font-bold">bonus</span>', color: 'bg-gold-50 border-gold-300' },
 ]
 

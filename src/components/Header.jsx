@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import {
   Menu, X, ChevronDown, Globe, BarChart2, BookOpen,
-  Wrench, Newspaper, HelpCircle, Phone, ShieldCheck, Users, TrendingUp
+  Wrench, Newspaper, HelpCircle, Phone, ShieldCheck, Users, TrendingUp, Mail, MapPin, Clock
 } from 'lucide-react'
 
 const NAV = [
@@ -105,8 +105,26 @@ export default function Header() {
     <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white/95 backdrop-blur border-b border-gray-100'}`}>
       {/* Top bar */}
       <div className="bg-gradient-to-r from-gold-500 to-gold-600 text-gray-900 text-xs py-1.5 px-4 hidden sm:flex justify-between items-center font-semibold">
-        <span>📧 support@fexness.com &nbsp;|&nbsp; 📍 London, United Kingdom</span>
-        <span>⏰ Support: 24/7 live chat &amp; email</span>
+        <div className="flex items-center gap-3">
+          <a href="tel:+447853329918" className="flex items-center gap-1 hover:text-white transition-colors">
+            <Phone className="w-3 h-3" />
+            +44 7853 329918
+          </a>
+          <span>|</span>
+          <a href="mailto:support@fexness.com" className="flex items-center gap-1 hover:text-white transition-colors">
+            <Mail className="w-3 h-3" />
+            support@fexness.com
+          </a>
+          <span>|</span>
+          <span className="flex items-center gap-1">
+            <MapPin className="w-3 h-3" />
+            London, United Kingdom
+          </span>
+        </div>
+        <span className="flex items-center gap-1">
+          <Clock className="w-3 h-3" />
+          Support: 24/7 live chat &amp; email
+        </span>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
