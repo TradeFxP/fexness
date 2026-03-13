@@ -23,7 +23,7 @@ export default function Support() {
   return (
     <div>
       <PageHero
-        title="We're Here 24/5"
+        title="We're Here 24/7"
         subtitle="Multiple support channels with fast, transparent response times."
         image="https://picsum.photos/seed/support/1200/600"
       />

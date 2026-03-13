@@ -17,34 +17,34 @@ const PROMOS = [
   {
     badge: 'Welcome',
     title: '50% Welcome Bonus',
-    desc: 'Deposit $100 or more and receive a 50% bonus on your first deposit, credited directly to your trading account.',
+    desc: 'Get 50% bonus on every deposit. Boost your trading capital instantly with our generous welcome offer.',
     img: 'https://picsum.photos/seed/bonus1/600/350',
     highlight: true,
-    terms: ['Min deposit $100', 'Max bonus $500', 'Available once per client', 'Withdrawal after 30 lots traded'],
+    terms: ['50% bonus on all deposits', '3 lots trading required to activate', 'Complete 10 lots to withdraw', 'Bonus not withdrawable - can be lost in trading'],
   },
   {
-    badge: 'Loyalty',
-    title: '20% Reload Bonus',
-    desc: 'Already a client? Earn 20% extra on every subsequent deposit. Keep growing your capital and your bonus.',
+    badge: 'Referral',
+    title: 'Referral Program - $12 Per Lot',
+    desc: 'Refer traders and earn $12 commission per lot they trade. Unlimited earning potential with our generous referral program.',
     img: 'https://picsum.photos/seed/bonus2/600/350',
     highlight: false,
-    terms: ['Min deposit $200', 'Max bonus $1,000', 'Unlimited reloads', 'No expiry on active accounts'],
+    terms: ['$12 commission per lot traded', '2 business days processing time', 'Credited after volume conditions met', 'Unlimited referrals allowed'],
   },
   {
-    badge: 'Refer & Earn',
-    title: 'Refer a Friend — $50',
-    desc: 'Invite a friend to open and fund an account. Earn $50 for each referral once they complete their first trade.',
+    badge: 'VIP',
+    title: 'Signature Account Benefits',
+    desc: 'Unlock premium trading with our Signature account. No spread, no swap, no slippage, and unlimited leverage.',
     img: 'https://picsum.photos/seed/referral/600/350',
     highlight: false,
-    terms: ['Referee must fund $100+', 'Must complete 5 round-turn lots', 'No limit on referrals', 'Paid within 7 business days'],
+    terms: ['Minimum deposit $5,000', 'No spread, no swap, no slippage', 'Unlimited leverage', 'Commission $3.5 per lot'],
   },
   {
-    badge: 'Cashback',
-    title: '$2 per Lot Cashback',
-    desc: 'Trade more, earn more. Receive $2 cashback per standard lot traded, paid to your account weekly.',
+    badge: 'Trading',
+    title: 'Ultra-Low Spreads',
+    desc: 'Trade with industry-leading spreads starting from 0.00 pips on ECN accounts and 0.06 pips on Premium accounts.',
     img: 'https://picsum.photos/seed/cashback/600/350',
     highlight: false,
-    terms: ['Applies to all ECN accounts', 'Paid every Monday', 'No minimum lots required', 'Cannot be combined with other bonuses'],
+    terms: ['ECN spreads from 0.00 pips', 'Premium spreads from 0.06 pips', 'Competitive commissions', 'Professional execution'],
   },
 ]
 
@@ -62,9 +62,9 @@ export default function PromotionsPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { icon: Gift, label: 'Welcome Bonus', value: '50%' },
-            { icon: Star, label: 'Reload Bonus', value: '20%' },
-            { icon: Users, label: 'Referral Reward', value: '$50' },
-            { icon: Percent, label: 'Cashback/Lot', value: '$2' },
+            { icon: Star, label: 'Spreads From', value: '0.00' },
+            { icon: Users, label: 'Referral/Lot', value: '$12' },
+            { icon: Percent, label: 'Commission', value: '$3.5' },
           ].map(({ icon: Icon, label, value }, i) => (
             <RevealCard key={i} delay={i * 80}>
               <div className="text-center bg-white rounded-2xl p-6 shadow-sm card-hover">
@@ -117,7 +117,7 @@ export default function PromotionsPage() {
         <div className="max-w-4xl mx-auto">
           <h4 className="font-bold text-gray-700 mb-2 text-sm">Terms & Conditions</h4>
           <p className="text-gray-400 text-xs leading-relaxed">
-            All promotions are subject to Fexness's standard Terms and Conditions. Bonuses are applied at the company's discretion. Promotions cannot be combined unless stated. Bonus funds are not withdrawable; only profits derived from bonus trading are eligible for withdrawal after meeting the minimum lot requirements. Fexness reserves the right to modify, suspend or cancel any promotion at any time without prior notice.
+            All promotions are subject to Fexness's standard Terms and Conditions. <strong>50% Bonus Policy:</strong> Requires 3 lots trading to activate conditions. Withdrawal allowed only after completing 10 lots trading volume. Bonus funds are not withdrawable and can be lost in trading. <strong>Referral Program:</strong> $12 commission per lot with 2 business days processing time. <strong>Withdrawal Conditions:</strong> May require completion of minimum trading volume (5 lots in certain promotion cases) before profit withdrawal. Some promotions may require removal of leverage conditions depending on account type. Fexness reserves the right to modify, suspend or cancel any promotion at any time without prior notice.
           </p>
         </div>
       </section>

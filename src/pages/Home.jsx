@@ -47,9 +47,9 @@ const TRADING_INSTRUMENTS = [
 const ACCOUNT_TYPES = [
   {
     name: 'Classic',
-    minDeposit: '$100',
-    leverage: '1:1000',
-    spreads: 'From 1.5 pips',
+    minDeposit: '$10',
+    leverage: '1:300',
+    spreads: 'From 0.2 pips',
     commission: 'No Commission',
     minLot: '0.01',
     swapFree: 'Not Swap Free',
@@ -60,14 +60,14 @@ const ACCOUNT_TYPES = [
     platforms: ['MetaTrader5', 'Mobile Application'],
     depositFees: '0',
     popular: false,
-    description: 'Perfect for beginners with competitive spreads and no commission fees.'
+    description: 'Perfect for beginners with ultra-tight spreads starting from 0.2 pips and no commission fees.'
   },
   {
     name: 'Standard',
-    minDeposit: '$500',
+    minDeposit: '$100',
     leverage: '1:1000',
-    spreads: 'From 2.0 pips',
-    commission: 'No Commission',
+    spreads: 'From 0.16 pips',
+    commission: '$3.5 per lot',
     minLot: '0.01',
     swapFree: 'Not Swap Free',
     markets: '7',
@@ -77,14 +77,31 @@ const ACCOUNT_TYPES = [
     platforms: ['MetaTrader5', 'Mobile Application'],
     depositFees: '0',
     popular: true,
-    description: 'Ideal for all traders with competitive spreads and no commission.'
+    description: 'Ideal for all traders with competitive spreads from 0.16 pips and commission of $3.5 per lot.'
+  },
+  {
+    name: 'Islamic',
+    minDeposit: '$50',
+    leverage: '1:500',
+    spreads: 'From 0.16 pips',
+    commission: 'No Commission',
+    minLot: '0.01',
+    swapFree: 'Islamic Swap Free',
+    markets: '7',
+    maxPositions: '300',
+    marginCall: '100%',
+    execution: 'Market Execution',
+    platforms: ['MetaTrader5', 'Mobile Application'],
+    depositFees: '0',
+    popular: false,
+    description: 'Trade without overnight swap fees with spreads from 0.16 pips, designed for Islamic faith traders.'
   },
   {
     name: 'Premium',
-    minDeposit: '$2,000',
+    minDeposit: '$500',
     leverage: '1:1000',
-    spreads: 'From 1.0 pips',
-    commission: 'No Commission',
+    spreads: 'From 0.06 pips',
+    commission: '$3.5 per lot',
     minLot: '0.01',
     swapFree: 'Not Swap Free',
     markets: '7',
@@ -94,14 +111,14 @@ const ACCOUNT_TYPES = [
     platforms: ['MetaTrader5', 'Mobile Application'],
     depositFees: '0',
     popular: false,
-    description: 'Advanced trading with tighter spreads and premium support.'
+    description: 'Advanced trading with ultra-tight spreads from 0.06 pips and commission of $3.5 per lot.'
   },
   {
     name: 'ECN',
-    minDeposit: '$5,000',
-    leverage: '1:1000',
-    spreads: 'From 0.0 pips',
-    commission: 'Available',
+    minDeposit: '$200',
+    leverage: '1:200',
+    spreads: 'From 0.00 pips',
+    commission: '$3.5 per lot per side',
     minLot: '0.1',
     swapFree: 'Not Swap Free',
     markets: '7',
@@ -111,41 +128,24 @@ const ACCOUNT_TYPES = [
     platforms: ['MetaTrader5', 'Mobile Application'],
     depositFees: '0',
     popular: false,
-    description: 'Trade with raw spreads and ultra-fast ECN execution for professional-level pricing.'
+    description: 'Trade with raw spreads from 0.00 pips and ultra-fast ECN execution with $3.5 commission per lot per side.'
   },
   {
-    name: 'Islamic',
-    minDeposit: '$10,000',
-    leverage: '1:500',
-    spreads: 'From 2.5 pips',
-    commission: 'No Commission',
-    minLot: '1',
-    swapFree: 'Islamic Swap Free',
-    markets: '7',
-    maxPositions: '300',
-    marginCall: '100%',
-    execution: 'Market Execution',
-    platforms: ['MetaTrader5', 'Mobile Application'],
-    depositFees: '0',
-    popular: false,
-    description: 'Trade without overnight swap fees, designed for experienced traders.'
-  },
-  {
-    name: 'Platinum',
-    minDeposit: '$25,000',
-    leverage: '1:500',
-    spreads: 'From 0.0 pips',
-    commission: 'Lowest Available',
+    name: 'Signature',
+    minDeposit: '$5,000',
+    leverage: 'Unlimited',
+    spreads: 'No Spread',
+    commission: '$3.5 per lot',
     minLot: '0.1',
-    swapFree: 'Available on Request',
+    swapFree: 'No Swap',
     markets: '7',
     maxPositions: '500',
     marginCall: '100%',
-    execution: 'Priority Execution',
+    execution: 'No Slippage',
     platforms: ['MetaTrader5', 'Mobile Application', 'Dedicated Account Manager'],
     depositFees: '0',
     popular: false,
-    description: 'Premium tier with exclusive benefits, priority execution, and personalized support.'
+    description: 'Premium tier with no spread, no swap, no slippage, unlimited leverage, and $3.5 commission per lot.'
   },
 ]
 
@@ -191,21 +191,21 @@ const SERVICES_TOOLS = [
 const PROMOTIONS = [
   {
     emoji: '🎁',
-    title: 'Welcome Trading Credit - 30% Bonus',
-    desc: 'Get 30% bonus on every deposit directly to your trading account.',
-    features: ['<span class="font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded">30% bonus</span> on all deposits', 'Not withdrawable - can be lost in trading', 'Instant credit on deposit', 'Boost your trading capital']
+    title: 'Welcome Trading Credit - 50% Bonus',
+    desc: 'Get 50% bonus on every deposit directly to your trading account.',
+    features: ['<span class="font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded">50% bonus</span> on all deposits', '3 lots trading required to activate', 'Complete 10 lots to withdraw', 'Not withdrawable - bonus can be lost in trading']
   },
   {
-    emoji: '💰',
-    title: 'Deposit Reward Program',
-    desc: 'Earn $100 trading bonus for every $2,000 deposit.',
-    features: ['<span class="font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded">$100 bonus</span> per $2,000 deposit', 'Automatic bonus credit', 'Multiple deposits eligible', 'Use bonus for trading']
+    emoji: '🤝',
+    title: 'Referral Program',
+    desc: 'Refer traders and earn $12 commission per lot they trade.',
+    features: ['<span class="font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded">$12 commission</span> per lot', '2 business days processing', 'Credited after volume conditions met', 'Unlimited referrals allowed']
   },
   {
-    emoji: '🏆',
-    title: 'Loyalty & VIP Rewards',
-    desc: 'Trade actively and earn $500 bonus for every 500 lots traded.',
-    features: ['<span class="font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded">$500</span> per 500 lots traded', 'Automatic loyalty tracking', 'No maximum limit', 'Dedicated VIP support']
+    emoji: '💎',
+    title: 'VIP Signature Benefits',
+    desc: 'Unlock premium Signature account with unlimited leverage and zero spread.',
+    features: ['No spread, no swap, no slippage', 'Unlimited leverage available', 'Commission <span class="font-bold text-orange-600 bg-orange-100 px-2 py-0.5 rounded">$3.5 per lot</span>', 'Dedicated account manager']
   },
 ]
 
@@ -342,7 +342,7 @@ export default function Home() {
                   : 'bg-white border-2 border-gold-200 hover:border-gold-400 hover:shadow-xl'
               }`}>
                 {account.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 text-xs font-black px-4 py-1 rounded-full shadow-md">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-xs font-black px-4 py-1 rounded-full shadow-md">
                     ⭐ MOST POPULAR
                   </div>
                 )}
@@ -504,7 +504,7 @@ export default function Home() {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-orange-50 via-white to-gray-50 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-72 h-72 bg-gold-400 rounded-full blur-3xl animate-pulse"></div>
@@ -762,9 +762,9 @@ export default function Home() {
           </div>
 
           {/* Risk Warning - Prominent Card */}
-          <div className="bg-gradient-to-br from-yellow-50 to-orange-50 border-2 border-yellow-400 rounded-3xl p-8 mb-8 shadow-lg">
+          <div className="bg-gradient-to-br from-orange-100 to-red-50 border-2 border-orange-500 rounded-3xl p-8 mb-8 shadow-lg">
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-2xl">
+              <div className="flex-shrink-0 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-2xl">
                 ⚠️
               </div>
               <div>
@@ -779,7 +779,7 @@ export default function Home() {
                   <p>
                     You are strongly advised to obtain independent financial, legal and tax advice before proceeding with any currency or spot metals trade. Nothing in this site should be read or construed as constituting advice on the part of Fexness Limited or any of its affiliates, directors, officers or employees.
                   </p>
-                  <div className="bg-yellow-100 border-l-4 border-yellow-600 p-4 rounded mt-4">
+                  <div className="bg-orange-100 border-l-4 border-orange-600 p-4 rounded mt-4">
                     <p className="font-semibold text-gray-900">
                       <strong>Restricted Regions:</strong> Fexness Limited does not provide services for citizens/residents of USA, Venezuela, Ukraine, Iran, Cuba, Myanmar, North Korea, Sudan. The services of Fexness Limited are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
                     </p>

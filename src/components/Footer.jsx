@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { BarChart2, Linkedin, Twitter, Facebook, Instagram, Youtube, Mail, MapPin } from "lucide-react"
+import { BarChart2, Linkedin, Twitter, Facebook, Instagram, Youtube, Mail, MapPin, Phone, Send } from "lucide-react"
 
 const COLS = [
   {
@@ -74,13 +74,13 @@ export default function Footer() {
             </p>
             <div className="flex gap-3 mb-4">
               {[
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: Facebook, href: "#" },
-                { icon: Instagram, href: "#" },
-                { icon: Youtube, href: "#" },
+                { icon: Linkedin, href: "https://linkedin.com/company/fexness" },
+                { icon: Twitter, href: "https://x.com/fexnessofficial" },
+                { icon: Facebook, href: "https://www.facebook.com/fexnessofficial" },
+                { icon: Youtube, href: "https://www.youtube.com/@Fexness" },
+                { icon: Send, href: "https://t.me/fexnesstech" },
               ].map(({ icon: Icon, href }, i) => (
-                <a key={i} href={href} className="p-2 rounded-lg bg-gray-800 hover:bg-gold-500 text-gray-400 hover:text-white transition-all">
+                <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-gray-800 hover:bg-gold-500 text-gray-400 hover:text-white transition-all">
                   <Icon className="w-4 h-4" />
                 </a>
               ))}
@@ -119,17 +119,24 @@ export default function Footer() {
             </div>
           ))}
           <div className="flex gap-3">
+            <Phone className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
+            <div>
+              <div className="text-white text-xs font-bold mb-0.5">Fexness Hotline</div>
+              <a href="tel:+447853329918" className="text-gray-400 hover:text-gold-400 text-xs transition-colors">+44 7853 329918</a>
+            </div>
+          </div>
+          <div className="flex gap-3">
             <Mail className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
             <div>
               <div className="text-white text-xs font-bold mb-0.5">Email Support</div>
-              <div className="text-gray-400 text-xs">support@fexness.com</div>
+              <a href="mailto:support@fexness.com" className="text-gray-400 hover:text-gold-400 text-xs transition-colors">support@fexness.com</a>
             </div>
           </div>
         </div>
 
         {/* Risk Warning */}
-        <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-600/30 rounded-xl p-5 mb-8">
-          <h4 className="text-yellow-400 font-bold text-sm mb-2 flex items-center gap-2">
+        <div className="bg-gradient-to-r from-orange-900/20 to-red-900/20 border border-orange-600/30 rounded-xl p-5 mb-8">
+          <h4 className="text-orange-400 font-bold text-sm mb-2 flex items-center gap-2">
             <span className="text-lg">⚠️</span> Risk Warning
           </h4>
           <p className="text-gray-300 text-xs leading-relaxed">
