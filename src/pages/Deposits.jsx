@@ -20,8 +20,6 @@ const METHODS = [
   { icon: Smartphone, name: 'Neteller', deposit: 'Instant', withdraw: '24 hours', min: '$10', max: '$5,000', fee: '0%', img: 'https://picsum.photos/seed/neteller/80/50' },
   { icon: Bitcoin, name: 'Bitcoin (BTC)', deposit: 'Instant', withdraw: '1-2 hours', min: '$50', max: 'Unlimited', fee: '0%', img: 'https://picsum.photos/seed/bitcoin/80/50' },
   { icon: Bitcoin, name: 'USDT (TRC20)', deposit: 'Instant', withdraw: '1-2 hours', min: '$50', max: 'Unlimited', fee: '0%', img: 'https://picsum.photos/seed/usdt/80/50' },
-  { icon: Smartphone, name: 'Perfect Money', deposit: 'Instant', withdraw: '24 hours', min: '$10', max: '$3,000', fee: '0%', img: 'https://picsum.photos/seed/pm/80/50' },
-  { icon: CreditCard, name: 'Fasapay', deposit: 'Instant', withdraw: '24 hours', min: '$10', max: '$2,000', fee: '0%', img: 'https://picsum.photos/seed/fasa/80/50' },
 ]
 
 const STEPS_DEPOSIT = [
@@ -63,7 +61,7 @@ export default function Deposits() {
       </Section>
 
       {/* Methods Table */}
-      <Section title="Payment Methods" subtitle="We support 8+ deposit and withdrawal options">
+      <Section title="Payment Methods" subtitle="We support 6+ deposit and withdrawal options">
         <div className="overflow-x-auto">
           <table className="w-full bg-white rounded-2xl overflow-hidden shadow-sm min-w-[640px]">
             <thead>
@@ -100,7 +98,7 @@ export default function Deposits() {
           {STEPS_DEPOSIT.map((s, i) => (
             <RevealCard key={i} delay={i * 100}>
               <div className="text-center bg-white rounded-2xl p-6 border card-hover">
-                <div className="text-5xl font-bold text-gold-100 mb-2">{s.step}</div>
+                <div className="text-5xl font-bold text-gold-600 mb-2">{s.step}</div>
                 <h4 className="font-bold mb-2">{s.title}</h4>
                 <p className="text-gray-500 text-sm">{s.desc}</p>
               </div>

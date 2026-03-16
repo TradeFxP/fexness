@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { BarChart2, Linkedin, Twitter, Facebook, Instagram, Youtube, Mail, MapPin, Phone, Send } from "lucide-react"
 
 const COLS = [
@@ -8,7 +8,7 @@ const COLS = [
     links: [
       { label: "Markets", to: "/markets" },
       { label: "Platforms", to: "/platforms" },
-      { label: "Account Types", to: "/accounts" },
+      { label: "Account Types", to: "/#accounts" },
       { label: "Pricing & Spreads", to: "/pricing" },
       { label: "Leverage", to: "/leverage" },
     ],
@@ -46,20 +46,23 @@ const COLS = [
       { label: "Help Centre", to: "/support" },
       { label: "FAQ", to: "/faq" },
       { label: "Contact Us", to: "/contact" },
+      { label: "Careers", to: "/careers" },
     ],
   },
   {
     title: "Legal",
     links: [
-      { label: "Risk Disclosure", to: "/legal" },
-      { label: "Terms & Conditions", to: "/legal" },
-      { label: "Privacy Policy", to: "/legal" },
-      { label: "AML Policy", to: "/legal" },
+      { label: "Risk Disclosure", to: "/legal#risk" },
+      { label: "Terms & Conditions", to: "/legal#terms" },
+      { label: "Privacy Policy", to: "/legal#privacy" },
+      { label: "AML Policy", to: "/legal#aml" },
     ],
   },
 ]
 
 export default function Footer() {
+  const navigate = useNavigate()
+
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 py-14">
@@ -94,9 +97,39 @@ export default function Footer() {
               <ul className="space-y-2">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <Link to={link.to} className="text-gray-400 hover:text-gold-400 text-xs transition-colors">
-                      {link.label}
-                    </Link>
+                    {link.to.includes('#') ? (
+                      <a 
+                        href={link.to} 
+                        className="text-gray-400 hover:text-gold-400 text-xs transition-colors"
+                        onClick={(e) => {
+                          e.preventDefault()
+                          const [path, hash] = link.to.split('#')
+                          
+                          if (window.location.pathname === path || path === '') {
+                            // Already on the same page, just update hash
+                            navigate(link.to)
+                            // For homepage accounts section
+                            if (hash && path === '/') {
+                              setTimeout(() => {
+                                const element = document.getElementById(hash)
+                                if (element) {
+                                  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                                }
+                              }, 100)
+                            }
+                          } else {
+                            // Navigate to different page
+                            navigate(link.to)
+                          }
+                        }}
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link to={link.to} className="text-gray-400 hover:text-gold-400 text-xs transition-colors">
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

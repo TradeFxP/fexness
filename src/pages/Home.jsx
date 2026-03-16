@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { ShieldCheck, Zap, TrendingUp, Globe, Award, ArrowRight, CheckCircle, BarChart2, Target, RefreshCw, Edit3, Gauge, Eye, Activity } from 'lucide-react'
 
@@ -64,10 +64,10 @@ const ACCOUNT_TYPES = [
   },
   {
     name: 'Standard',
-    minDeposit: '$100',
+    minDeposit: '$30',
     leverage: '1:1000',
     spreads: 'From 0.16 pips',
-    commission: '$3.5 per lot',
+    commission: 'No Commission',
     minLot: '0.01',
     swapFree: 'Not Swap Free',
     markets: '7',
@@ -77,7 +77,7 @@ const ACCOUNT_TYPES = [
     platforms: ['MetaTrader5', 'Mobile Application'],
     depositFees: '0',
     popular: true,
-    description: 'Ideal for all traders with competitive spreads from 0.16 pips and commission of $3.5 per lot.'
+    description: 'Ideal for all traders with competitive spreads from 0.16 pips and no commission fees.'
   },
   {
     name: 'Islamic',
@@ -98,7 +98,7 @@ const ACCOUNT_TYPES = [
   },
   {
     name: 'Premium',
-    minDeposit: '$500',
+    minDeposit: '$200',
     leverage: '1:1000',
     spreads: 'From 0.06 pips',
     commission: '$3.5 per lot',
@@ -115,7 +115,7 @@ const ACCOUNT_TYPES = [
   },
   {
     name: 'ECN',
-    minDeposit: '$200',
+    minDeposit: '$500',
     leverage: '1:200',
     spreads: 'From 0.00 pips',
     commission: '$3.5 per lot per side',
@@ -211,6 +211,8 @@ const PROMOTIONS = [
 
 
 export default function Home() {
+  const sliderRef = useRef(null)
+  
   useEffect(() => {
     // Inject Tawk.to chat script
     if (typeof window === 'undefined') return
@@ -227,6 +229,78 @@ export default function Home() {
       try { document.body.removeChild(s1) } catch (e) { /* ignore */ }
     }
   }, [])
+
+  useEffect(() => {
+    // Auto-scroll slider
+    const slider = sliderRef.current
+    if (!slider) return
+
+    let scrollInterval
+    let isUserInteracting = false
+    let isScrolling = false
+
+    const startAutoScroll = () => {
+      scrollInterval = setInterval(() => {
+        if (!isUserInteracting && !isScrolling && slider) {
+          const cardWidth = slider.querySelector('.snap-center')?.offsetWidth || 320
+          const gap = 12 // gap-3 on mobile = 0.75rem = 12px
+          const scrollAmount = cardWidth + gap
+          const maxScroll = slider.scrollWidth - slider.clientWidth
+          const currentScroll = slider.scrollLeft
+          
+          // Check if we're at or very close to the end
+          if (currentScroll >= maxScroll - 5) {
+            // Smoothly reset to start
+            isScrolling = true
+            slider.scrollTo({ left: 0, behavior: 'smooth' })
+            setTimeout(() => {
+              isScrolling = false
+            }, 800)
+          } else {
+            // Scroll to next card
+            isScrolling = true
+            slider.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+            setTimeout(() => {
+              isScrolling = false
+            }, 600)
+          }
+        }
+      }, 3500) // Increased to 3.5 seconds for smoother transitions
+    }
+
+    // Pause auto-scroll when user interacts
+    const handleInteractionStart = () => {
+      isUserInteracting = true
+      clearInterval(scrollInterval)
+    }
+
+    const handleInteractionEnd = () => {
+      setTimeout(() => {
+        isUserInteracting = false
+        startAutoScroll()
+      }, 1000)
+    }
+
+    slider.addEventListener('mousedown', handleInteractionStart)
+    slider.addEventListener('touchstart', handleInteractionStart, { passive: true })
+    slider.addEventListener('mouseup', handleInteractionEnd)
+    slider.addEventListener('touchend', handleInteractionEnd, { passive: true })
+    slider.addEventListener('mouseleave', handleInteractionEnd)
+
+    startAutoScroll()
+
+    return () => {
+      clearInterval(scrollInterval)
+      if (slider) {
+        slider.removeEventListener('mousedown', handleInteractionStart)
+        slider.removeEventListener('touchstart', handleInteractionStart)
+        slider.removeEventListener('mouseup', handleInteractionEnd)
+        slider.removeEventListener('touchend', handleInteractionEnd)
+        slider.removeEventListener('mouseleave', handleInteractionEnd)
+      }
+    }
+  }, [])
+
   return (
     <div>
       {/* Hero Section */}
@@ -235,33 +309,121 @@ export default function Home() {
           <div className="absolute inset-0" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1920&h=1080&fit=crop)', backgroundSize: 'cover'}} />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 py-20 lg:py-28">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
             <div>
-              <h1 className="text-5xl lg:text-6xl font-black leading-tight mb-6 text-gray-800">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6 text-gray-800">
                 Next-Generation Trading <span className="text-gold-600">Starts Here</span>
               </h1>
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
                 Experience lightning-fast execution, advanced charting tools, and seamless multi-device access — powered by cutting-edge brokerage technology.
               </p>
-              <div className="flex flex-wrap gap-4 mb-12">
-                <a href="https://portal.fexness.com/signup" className="bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold px-10 py-4 rounded-xl hover:from-gold-600 hover:to-gold-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2 text-lg">
-                  Open Live Account <ArrowRight className="w-5 h-5" />
+              <div className="flex flex-wrap gap-4 mb-8 lg:mb-12">
+                <a href="https://portal.fexness.com/signup" className="bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold px-8 md:px-10 py-3 md:py-4 rounded-xl hover:from-gold-600 hover:to-gold-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2 text-base md:text-lg">
+                  Open Live Account <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                 </a>
-                <a href="https://portal.fexness.com/signup" className="border-2 border-gold-600 text-gold-600 font-bold px-10 py-4 rounded-xl hover:bg-gold-50 transition-all text-lg">
+                <a href="https://portal.fexness.com/signup" className="border-2 border-gold-600 text-gold-600 font-bold px-8 md:px-10 py-3 md:py-4 rounded-xl hover:bg-gold-50 transition-all text-base md:text-lg">
                   Try Free Demo
                 </a>
               </div>
             </div>
 
-            {/* Right Hero Image */}
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-gold-200">
-                <img 
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" 
-                  alt="Trading Platform Dashboard" 
-                  className="w-full h-auto"
-                />
+            {/* Right Hero Features Slider */}
+            <div className="relative w-full overflow-hidden">
+              <div 
+                ref={sliderRef}
+                className="flex gap-3 md:gap-4 overflow-x-auto overflow-y-hidden scrollbar-hide snap-x snap-mandatory cursor-grab active:cursor-grabbing pb-2" 
+                style={{
+                  scrollbarWidth: 'none', 
+                  msOverflowStyle: 'none',
+                  WebkitOverflowScrolling: 'touch',
+                  scrollBehavior: 'smooth'
+                }}
+              >
+                {/* Feature Card 1 - Trading Platform */}
+                <div className="min-w-[85%] sm:min-w-[320px] md:min-w-[340px] lg:min-w-[380px] snap-center snap-always flex-shrink-0 bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border-3 border-gold-200">
+                  <div className="h-[380px] sm:h-[400px] md:h-[420px] relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=500&fit=crop" 
+                      alt="Forex Trading Platform Dashboard" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2">Advanced Trading</h3>
+                      <p className="text-base sm:text-lg font-semibold">Platform Dashboard</p>
+                      <p className="text-sm text-gray-300 mt-2">Real-time charts & analytics</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Feature Card 2 - Mobile Trading */}
+                <div className="min-w-[85%] sm:min-w-[320px] md:min-w-[340px] lg:min-w-[380px] snap-center snap-always flex-shrink-0 bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border-3 border-gold-200">
+                  <div className="h-[380px] sm:h-[400px] md:h-[420px] relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=400&h=500&fit=crop" 
+                      alt="Mobile Forex Trading App" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2">Instant Forex</h3>
+                      <p className="text-base sm:text-lg font-semibold">Deposits & Withdrawal</p>
+                      <p className="text-sm text-gray-300 mt-2">Trade anywhere, anytime</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Feature Card 3 - Spreads */}
+                <div className="min-w-[85%] sm:min-w-[320px] md:min-w-[340px] lg:min-w-[380px] snap-center snap-always flex-shrink-0 bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border-3 border-gold-200">
+                  <div className="h-[380px] sm:h-[400px] md:h-[420px] relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=500&fit=crop" 
+                      alt="Low Forex Spreads" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2">Forex Spreads</h3>
+                      <p className="text-base sm:text-lg font-semibold">as Low as 0.0 Pips</p>
+                      <p className="text-sm text-gray-300 mt-2">Competitive pricing</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Feature Card 4 - Copy Trading */}
+                <div className="min-w-[85%] sm:min-w-[320px] md:min-w-[340px] lg:min-w-[380px] snap-center snap-always flex-shrink-0 bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border-3 border-gold-200">
+                  <div className="h-[380px] sm:h-[400px] md:h-[420px] relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=500&fit=crop" 
+                      alt="Copy Trading Platform" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2">Seamless Copy Trading</h3>
+                      <p className="text-base sm:text-lg font-semibold">for Beginners</p>
+                      <p className="text-sm text-gray-300 mt-2">Start from USD 25</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Feature Card 5 - MetaTrader */}
+                <div className="min-w-[85%] sm:min-w-[320px] md:min-w-[340px] lg:min-w-[380px] snap-center snap-always flex-shrink-0 bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border-3 border-gold-200">
+                  <div className="h-[380px] sm:h-[400px] md:h-[420px] relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=400&h=500&fit=crop" 
+                      alt="MetaTrader Platform" 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6 text-white">
+                      <h3 className="text-xl sm:text-2xl font-bold mb-2">MetaTrader 5</h3>
+                      <p className="text-base sm:text-lg font-semibold">Professional Platform</p>
+                      <p className="text-sm text-gray-300 mt-2">Advanced trading tools</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -285,7 +447,7 @@ export default function Home() {
       </section>
 
       {/* Trading Instruments */}
-      <section className="bg-white py-16 border-t-4 border-gold-200">
+      <section id="instruments" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-black text-gray-800 mb-4">Multi-Asset Trading Opportunities</h2>
@@ -325,7 +487,7 @@ export default function Home() {
       </section>
 
       {/* Account Types */}
-      <section className="bg-gradient-to-br from-gold-50 via-yellow-50 to-amber-50 py-16 border-y-4 border-gold-200">
+      <section id="accounts" className="bg-gradient-to-br from-gold-50 via-yellow-50 to-amber-50 py-16 border-y-4 border-gold-200">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-black text-gray-800 mb-4">Choose the Account That Fits Your Strategy</h2>
@@ -558,7 +720,7 @@ export default function Home() {
               
               <div className="bg-white rounded-3xl p-8 border-2 border-gold-200 hover:border-gold-500 transition-all duration-300 hover:shadow-2xl shadow-lg">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Our journey is driven by <span className="text-gold-600 font-bold">innovation, integrity, and an unwavering commitment</span> to our traders' success. Fexness don't just facilitate trades—we empower traders to reach their full potential.
+                  Our journey is driven by <span className="text-gold-600 font-bold">innovation</span> <span className="text-gold-600 font-bold">integrity</span> and <span className="text-gold-600 font-bold">an unwavering commitment</span> to our traders' success. Fexness don't just facilitate trades—we empower traders to reach their full potential.
                 </p>
               </div>
             </div>

@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FileText, Shield, Lock, AlertCircle, Eye } from 'lucide-react'
+import { useLocation } from 'react-router-dom'
 import PageHero from '../components/PageHero'
 import Section from '../components/Section'
 
@@ -228,7 +229,21 @@ This AML Policy is reviewed by Fexness at least annually or whenever there are s
 
 export default function Legal() {
   const [tab, setTab] = useState('risk')
+  const location = useLocation()
   const active = TABS.find(t => t.key === tab)
+
+  useEffect(() => {
+    // Check for hash in URL and set the corresponding tab
+    if (location.hash) {
+      const hash = location.hash.substring(1) // Remove the #
+      const foundTab = TABS.find(t => t.key === hash)
+      if (foundTab) {
+        setTab(hash)
+        // Scroll to top when tab changes
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    }
+  }, [location])
 
   return (
     <div>
@@ -243,7 +258,10 @@ export default function Legal() {
           {TABS.map(({ key, label, icon: Icon }) => (
             <button
               key={key}
-              onClick={() => setTab(key)}
+              onClick={() => {
+                setTab(key)
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${tab === key ? 'bg-gold-500 text-white shadow' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'}`}
             >
               <Icon className="w-4 h-4" /> {label}

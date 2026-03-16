@@ -30,14 +30,14 @@ export default function Portal() {
       <PageHero
         title="Client Portal"
         subtitle="Your all-in-one hub for trading, funding, and account management."
-        image="https://picsum.photos/seed/portal/1200/600"
+        image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop"
       />
 
       {/* Portal Preview */}
       <Section title="Portal Overview" subtitle="Everything you need, in one secure dashboard">
         <div className="grid md:grid-cols-2 gap-10 items-center mb-12">
           <img
-            src="https://picsum.photos/seed/dashboard/700/450"
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&h=450&fit=crop"
             alt="Portal Dashboard"
             className="rounded-2xl shadow-xl border w-full"
           />
