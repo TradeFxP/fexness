@@ -14,7 +14,7 @@ function RevealCard({ children, delay = 0 }) {
 }
 
 const PILLARS = [
-  { icon: ShieldCheck, title: 'FSRC Licensed', desc: 'Fexness is authorized and regulated by the Financial Services Regulatory Commission (FSRC) of Saint Lucia (License No. 2024-00185).' },
+  { icon: ShieldCheck, title: 'ARCA Licensed', desc: 'Fexness is authorized and regulated by ARCA (Anguilla Regulatory and Compliance Authority), ensuring full compliance with international financial standards.' },
   { icon: Lock, title: 'Segregated Funds', desc: 'All client funds are held in segregated accounts at Tier-1 banks, completely separate from our operational funds.' },
   { icon: FileText, title: 'AML & KYC Policy', desc: 'We implement strict Anti-Money Laundering and Know Your Customer procedures to prevent financial crime and protect our platform.' },
   { icon: AlertCircle, title: 'Risk Disclosure', desc: 'We proactively disclose trading risks to all clients. CFDs are complex instruments and carry high risk of losing money rapidly.' },
@@ -33,7 +33,7 @@ export default function Regulation() {
       <PageHero
         title="Regulation & Security"
         subtitle="Your security is our top priority. Licensed, compliant, and transparent."
-        image="https://picsum.photos/seed/security/1200/600"
+        image="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&h=600&fit=crop"
       />
 
       {/* Pillars */}
@@ -56,16 +56,20 @@ export default function Regulation() {
       {/* License Info */}
       <Section title="Our License" gray>
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-          <img src="https://picsum.photos/seed/license/600/400" alt="License" className="rounded-2xl shadow-lg" />
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop" alt="ARCA License" className="rounded-2xl shadow-lg" />
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">FSRC Saint Lucia Authorization</h3>
-            <p className="text-gray-500 leading-relaxed">Fexness Ltd is duly authorized and regulated under the Securities Act of Saint Lucia. Our regulatory status is publicly verifiable on the FSRC official website.</p>
+            <h3 className="text-2xl font-bold">ARCA Regulation</h3>
+            <p className="text-gray-500 leading-relaxed">
+              Fexness operates under the regulatory oversight of ARCA (Anguilla Regulatory and Compliance Authority). 
+              We adhere to strict international standards for financial services, ensuring transparency, security, and client protection.
+            </p>
             {[
-              'License No. 2024-00185',
-              'Incorporated in Saint Lucia',
+              'Licensed by ARCA',
+              'Incorporated in Anguilla',
               'Annual independent audits',
               'Compliance officer on-staff',
               'Regular regulatory reporting',
+              'International financial standards compliance',
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-gold-500 flex-shrink-0" />
@@ -82,7 +86,7 @@ export default function Regulation() {
           {KYC_STEPS.map((s, i) => (
             <RevealCard key={i} delay={i * 100}>
               <div className="text-center bg-gray-50 rounded-2xl p-6 border">
-                <div className="text-5xl font-bold text-gold-100 mb-2">{s.step}</div>
+                <div className="text-5xl font-bold text-gold-600 mb-2">{s.step}</div>
                 <h4 className="font-bold mb-2">{s.title}</h4>
                 <p className="text-gray-500 text-sm">{s.desc}</p>
               </div>

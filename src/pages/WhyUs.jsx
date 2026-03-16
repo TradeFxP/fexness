@@ -25,16 +25,16 @@ const REASONS = [
 ]
 
 const COMPARE = [
-  { feature: 'Min Deposit', us: '$10', others: '$500+' },
-  { feature: 'Spreads From', us: '0.0 pips', others: '1.5 pips' },
-  { feature: 'Commission', us: '$3/lot round trip', others: '$10+/lot' },
-  { feature: 'Regulation', us: 'FSRC Licensed', others: 'Offshore only' },
-  { feature: 'Execution Speed', us: '12ms avg', others: '250ms+' },
-  { feature: 'Leverage (max)', us: '1:2000', others: '1:100' },
-  { feature: 'MT5 Access', us: '✅ Free', others: '❌ / Paid' },
-  { feature: 'Copy Trading', us: '✅ Built-in', others: '❌ Not available' },
-  { feature: 'Islamic Account', us: '✅ Available', others: 'Limited' },
-  { feature: '24/5 Support', us: '✅ Multilingual', others: 'Email only' },
+  { feature: 'Spreads', us: 'No Spreads', others: '1.5 - 3.0 pips', icon: DollarSign },
+  { feature: 'Commission', us: '$3.5 per lot', others: '$10+ per lot', icon: DollarSign },
+  { feature: 'Regulation', us: 'ARCA Licensed', others: 'Offshore only', icon: ShieldCheck },
+  { feature: 'Max Leverage', us: '1:1000', others: '1:100 - 1:200', icon: TrendingUp },
+  { feature: 'Slippage', us: 'No Slippage', others: 'Frequent slippage', icon: Zap },
+  { feature: 'Min Deposit', us: '$10', others: '$500+', icon: DollarSign },
+  { feature: 'Execution Speed', us: 'Ultra Fast (12ms)', others: '250ms+', icon: Zap },
+  { feature: 'Copy Trading', us: '✅ Built-in', others: '❌ Not available', icon: BarChart2 },
+  { feature: 'Islamic Account', us: '✅ Available', others: 'Limited', icon: CheckCircle },
+  { feature: '24/7 Support', us: '✅ Multilingual', others: 'Email only', icon: Headphones },
 ]
 
 export default function WhyUs() {
@@ -64,26 +64,67 @@ export default function WhyUs() {
       </Section>
 
       {/* Comparison Table */}
-      <Section title="Fexness vs Others" subtitle="See how we stack up against the competition" gray>
-        <div className="overflow-x-auto">
-          <table className="w-full bg-white rounded-2xl overflow-hidden shadow-sm">
-            <thead>
-              <tr className="bg-gold-500 text-white">
-                <th className="text-left py-4 px-6">Feature</th>
-                <th className="text-center py-4 px-6">Fexness</th>
-                <th className="text-center py-4 px-6">Industry Average</th>
-              </tr>
-            </thead>
-            <tbody>
-              {COMPARE.map((row, i) => (
-                <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                  <td className="py-3 px-6 font-medium text-gray-700">{row.feature}</td>
-                  <td className="py-3 px-6 text-center text-gold-600 font-semibold">{row.us}</td>
-                  <td className="py-3 px-6 text-center text-gray-400">{row.others}</td>
+      <Section title="Fexness vs Others" subtitle="See how we outperform the competition" gray>
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 flex items-start gap-3">
+            <ShieldCheck className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+            <div className="text-sm text-blue-800">
+              <strong>Why Compare?</strong> Understanding broker differences helps you make informed decisions. 
+              See how Fexness delivers superior value across all key metrics.
+            </div>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-2xl overflow-hidden shadow-lg border-2 border-gray-200">
+              <thead>
+                <tr className="bg-gradient-to-r from-gold-600 to-gold-700 text-white">
+                  <th className="text-left py-5 px-6 font-bold text-base">Trading Feature</th>
+                  <th className="text-center py-5 px-6 font-bold text-base">
+                    <div className="flex items-center justify-center gap-2">
+                      <ShieldCheck className="w-5 h-5" />
+                      Fexness
+                    </div>
+                  </th>
+                  <th className="text-center py-5 px-6 font-bold text-base">Other Brokers</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {COMPARE.map((row, i) => {
+                  const Icon = row.icon
+                  return (
+                    <tr key={i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-gold-50 transition-colors`}>
+                      <td className="py-4 px-6 font-semibold text-gray-700 flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-lg bg-gold-100 flex items-center justify-center">
+                          <Icon className="w-5 h-5 text-gold-600" />
+                        </div>
+                        {row.feature}
+                      </td>
+                      <td className="py-4 px-6 text-center">
+                        <span className="inline-flex items-center gap-2 bg-green-100 text-green-700 font-bold px-4 py-2 rounded-lg">
+                          <CheckCircle className="w-4 h-4" />
+                          {row.us}
+                        </span>
+                      </td>
+                      <td className="py-4 px-6 text-center">
+                        <span className="inline-flex items-center text-gray-500 font-medium px-4 py-2">
+                          {row.others}
+                        </span>
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Summary Box */}
+          <div className="mt-8 bg-gradient-to-r from-gold-600 to-gold-700 text-white rounded-2xl p-6 text-center">
+            <h3 className="text-2xl font-bold mb-2">The Fexness Advantage</h3>
+            <p className="text-gold-100">
+              Superior trading conditions, transparent pricing, and unmatched execution speed. 
+              Join thousands of satisfied traders worldwide.
+            </p>
+          </div>
         </div>
       </Section>
 

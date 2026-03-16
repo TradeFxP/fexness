@@ -35,13 +35,13 @@ export default function Leverage() {
       <PageHero
         title="Leverage & Margin"
         subtitle="Amplify your trading power. Understand leverage before you trade."
-        image="https://picsum.photos/seed/leverage/1200/600"
+        image="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=1200&h=600&fit=crop"
       />
 
       {/* Intro */}
       <Section title="What Is Leverage?" subtitle="Leverage allows you to control a larger position with a smaller deposit">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <img src="https://picsum.photos/seed/leverage2/600/400" alt="Leverage" className="rounded-2xl shadow-lg" />
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop" alt="Leverage Trading" className="rounded-2xl shadow-lg" />
           <div className="space-y-4">
             <p className="text-gray-600 leading-relaxed">
               Leverage is the use of borrowed capital to increase the potential return of an investment. At Fexness, we offer leverage up to <strong>1:2000</strong> on selected forex instruments for professional clients.

@@ -31,9 +31,10 @@ const MILESTONES = [
 
 const TEAM = [
   { 
-    name: 'Chief Executive Officer', 
+    name: 'Eduardo Carvalho', 
     role: 'CEO', 
-    img: 'https://picsum.photos/seed/ceo/200/200',
+    country: 'Portugal',
+    img: '/images/eduardo-ceo.jpeg',
     speech: `Good day everyone!!!
 
 It is a pleasure to be here with you.
@@ -75,9 +76,10 @@ At Fexness, we are ready for that future.
 Thank you.`
   },
   { 
-    name: 'Chief Operating Officer', 
+    name: 'Zeynep Kaya', 
     role: 'COO', 
-    img: 'https://picsum.photos/seed/coo/200/200',
+    country: 'Turkey',
+    img: '/images/zeynep-coo.jpeg',
     speech: `Hello everyone!!!
 
 As Chief Operating Officer, my focus is simple: execution. Vision defines where we want to go — operations determine whether we actually get there.
@@ -118,9 +120,10 @@ Together, we will continue to set higher standards for operational excellence in
 Thank you.`
   },
   { 
-    name: 'Chief Technology Officer', 
+    name: 'Rahul Nair', 
     role: 'CTO', 
-    img: 'https://picsum.photos/seed/cto/200/200',
+    country: 'India',
+    img: '/images/rahul-cto.jpeg',
     speech: `Hello!!!
 
 It's an honor to speak with you.
@@ -163,9 +166,10 @@ We remain committed to building technology that empowers global markets — secu
 Thank you.`
   },
   { 
-    name: 'Head of Compliance', 
-    role: 'Compliance Officer', 
-    img: 'https://picsum.photos/seed/compliance/200/200',
+    name: 'Ananya Gupta', 
+    role: 'Head of Compliance', 
+    country: 'India',
+    img: '/images/ananya-compliance.jpeg',
     speech: `Good day!!!
 
 It is a privilege to address you.
@@ -301,18 +305,21 @@ export default function About() {
 
       {/* Team */}
       <Section title="Meet the Leadership" subtitle="Experienced professionals driving Fexness forward" gray>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {TEAM.map((member, i) => (
             <RevealCard key={i} delay={i * 100}>
               <div className="bg-white rounded-2xl shadow-md border border-gray-200 overflow-hidden card-hover h-full flex flex-col">
                 <div className="p-6 text-center flex-shrink-0">
-                  <img 
-                    src={member.img} 
-                    alt={member.name} 
-                    className="w-24 h-24 rounded-full mx-auto object-cover mb-4 border-4 border-gold-100" 
-                  />
+                  <div className="w-36 h-36 sm:w-32 sm:h-32 lg:w-36 lg:h-36 mx-auto mb-4 overflow-hidden">
+                    <img 
+                      src={member.img} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover object-top rounded-full border-4 border-gold-100 shadow-lg" 
+                    />
+                  </div>
                   <h4 className="font-bold text-lg text-gray-900">{member.name}</h4>
                   <p className="text-gold-600 text-sm font-semibold mt-1">{member.role}</p>
+                  <p className="text-gray-500 text-xs mt-1">{member.country}</p>
                 </div>
                 
                 <button
@@ -342,11 +349,13 @@ export default function About() {
             <RevealCard delay={100}>
               <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-6 md:p-10">
                 <div className="flex flex-col md:flex-row items-start gap-6 mb-6 pb-6 border-b border-gray-200">
-                  <img 
-                    src={TEAM[expandedMember].img} 
-                    alt={TEAM[expandedMember].name} 
-                    className="w-20 h-20 rounded-full object-cover border-4 border-gold-100 flex-shrink-0" 
-                  />
+                  <div className="w-24 h-24 overflow-hidden flex-shrink-0">
+                    <img 
+                      src={TEAM[expandedMember].img} 
+                      alt={TEAM[expandedMember].name} 
+                      className="w-full h-full object-cover object-top rounded-full border-4 border-gold-100 shadow-lg" 
+                    />
+                  </div>
                   <div className="flex-grow">
                     <h3 className="font-bold text-2xl text-gray-900 mb-1">
                       {TEAM[expandedMember].name}

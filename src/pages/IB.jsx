@@ -33,7 +33,7 @@ export default function IB() {
       <PageHero
         title="Introducing Broker Program"
         subtitle="Partner with Fexness and earn industry-leading commissions for every client you refer."
-        image="https://picsum.photos/seed/ib/1200/600"
+        image="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=1200&h=600&fit=crop"
       />
 
       {/* Stats */}
@@ -82,10 +82,10 @@ export default function IB() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {STEPS.map((s, i) => (
             <RevealCard key={i} delay={i * 100}>
-              <div className="text-center bg-white rounded-2xl p-6 border card-hover">
-                <div className="text-5xl font-bold text-gold-100 mb-2">{s.step}</div>
+              <div className="text-center bg-white rounded-2xl p-6 border card-hover h-full flex flex-col">
+                <div className="text-5xl font-bold text-gold-600 mb-2">{s.step}</div>
                 <h4 className="font-bold mb-2">{s.title}</h4>
-                <p className="text-gray-500 text-sm">{s.desc}</p>
+                <p className="text-gray-500 text-sm flex-grow">{s.desc}</p>
               </div>
             </RevealCard>
           ))}
@@ -95,7 +95,7 @@ export default function IB() {
       {/* Benefits */}
       <Section title="IB Benefits">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <img src="https://picsum.photos/seed/ib2/600/400" alt="IB Benefits" className="rounded-2xl shadow-lg" />
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="IB Benefits" className="rounded-2xl shadow-lg" />
           <div className="space-y-3">
             {[
               'Dedicated IB account manager',

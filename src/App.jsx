@@ -28,6 +28,7 @@ import SupportPage from './pages/SupportPage'
 import FAQ from './pages/FAQ'
 import Legal from './pages/Legal'
 import Portal from './pages/Portal'
+import Careers from './pages/Careers'
 
 export default function App() {
   const location = useLocation()
@@ -67,6 +68,7 @@ export default function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/portal" element={<Portal />} />
+          <Route path="/careers" element={<Careers />} />
         </Routes>
       </main>
       <Footer />

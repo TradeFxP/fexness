@@ -14,10 +14,72 @@ function RevealCard({ children, delay = 0 }) {
 }
 
 const ACCOUNT_SPREADS = [
-  { account: 'Classic', type: 'Spread only', eurusd: '1.2', gbpusd: '1.5', usdjpy: '1.3', gold: '25', oil: '4', commission: '$0' },
-  { account: 'Premium', type: 'Spread only', eurusd: '0.8', gbpusd: '1.0', usdjpy: '0.9', gold: '18', oil: '3', commission: '$0' },
-  { account: 'ECN Raw', type: 'Raw + Commission', eurusd: '0.0', gbpusd: '0.1', usdjpy: '0.1', gold: '8', oil: '2', commission: '$6/lot' },
-  { account: 'Islamic', type: 'Swap-free', eurusd: '1.5', gbpusd: '1.8', usdjpy: '1.5', gold: '28', oil: '5', commission: '$0' },
+  { 
+    account: 'Classic', 
+    type: 'Spread only', 
+    minDeposit: '$10',
+    leverage: '1:300',
+    spreads: 'From 0.2 pips',
+    commission: 'No Commission',
+    minLot: '0.01',
+    swapFree: 'Not Swap Free',
+    popular: false
+  },
+  { 
+    account: 'Standard', 
+    type: 'Spread only', 
+    minDeposit: '$30',
+    leverage: '1:1000',
+    spreads: 'From 0.16 pips',
+    commission: 'No Commission',
+    minLot: '0.01',
+    swapFree: 'Not Swap Free',
+    popular: true
+  },
+  { 
+    account: 'Islamic', 
+    type: 'Swap-free', 
+    minDeposit: '$50',
+    leverage: '1:500',
+    spreads: 'From 0.16 pips',
+    commission: 'No Commission',
+    minLot: '0.01',
+    swapFree: 'Islamic Swap Free',
+    popular: false
+  },
+  { 
+    account: 'Premium', 
+    type: 'Low Spread', 
+    minDeposit: '$200',
+    leverage: '1:1000',
+    spreads: 'From 0.06 pips',
+    commission: '$3.5 per lot',
+    minLot: '0.01',
+    swapFree: 'Not Swap Free',
+    popular: false
+  },
+  { 
+    account: 'ECN', 
+    type: 'Raw Spread', 
+    minDeposit: '$500',
+    leverage: '1:200',
+    spreads: 'From 0.00 pips',
+    commission: '$3.5 per lot per side',
+    minLot: '0.1',
+    swapFree: 'Not Swap Free',
+    popular: false
+  },
+  { 
+    account: 'Signature', 
+    type: 'VIP Premium', 
+    minDeposit: '$5,000',
+    leverage: 'Unlimited',
+    spreads: 'No Spread',
+    commission: '$3.5 per lot',
+    minLot: '0.1',
+    swapFree: 'No Swap',
+    popular: false
+  },
 ]
 
 const FEES = [
@@ -45,7 +107,7 @@ export default function Pricing() {
           {[
             { icon: DollarSign, label: 'Min Deposit', value: '$10' },
             { icon: TrendingUp, label: 'Spreads From', value: '0.0 pips' },
-            { icon: DollarSign, label: 'Commission', value: '$6/lot ECN' },
+            { icon: DollarSign, label: 'Commission', value: '$7/lot ECN' },
             { icon: Info, label: 'Deposit Fee', value: 'FREE' },
           ].map(({ icon: Icon, label, value }, i) => (
             <RevealCard key={i} delay={i * 80}>
@@ -80,35 +142,38 @@ export default function Pricing() {
 
         {tab === 'spreads' && (
           <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-2xl overflow-hidden shadow-sm min-w-[600px]">
+            <table className="w-full bg-white rounded-2xl overflow-hidden shadow-sm">
               <thead>
                 <tr className="bg-gold-500 text-white text-sm">
-                  <th className="text-left py-4 px-5">Account</th>
-                  <th className="text-left py-4 px-5">Type</th>
-                  <th className="text-center py-4 px-4">EUR/USD</th>
-                  <th className="text-center py-4 px-4">GBP/USD</th>
-                  <th className="text-center py-4 px-4">USD/JPY</th>
-                  <th className="text-center py-4 px-4">Gold</th>
-                  <th className="text-center py-4 px-4">Oil</th>
-                  <th className="text-center py-4 px-5">Commission</th>
+                  <th className="text-left py-4 px-5">Account Type</th>
+                  <th className="text-left py-4 px-5">Category</th>
+                  <th className="text-center py-4 px-4">Min Deposit</th>
+                  <th className="text-center py-4 px-4">Leverage</th>
+                  <th className="text-center py-4 px-4">Spreads</th>
+                  <th className="text-center py-4 px-4">Commission</th>
+                  <th className="text-center py-4 px-4">Min Lot</th>
+                  <th className="text-center py-4 px-5">Swap Free</th>
                 </tr>
               </thead>
               <tbody>
                 {ACCOUNT_SPREADS.map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                    <td className="py-3 px-5 font-bold text-gold-600">{row.account}</td>
+                  <tr key={i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} ${row.popular ? 'border-2 border-gold-400' : ''}`}>
+                    <td className="py-3 px-5 font-bold text-gold-600">
+                      {row.account}
+                      {row.popular && <span className="ml-2 text-xs bg-gold-500 text-white px-2 py-1 rounded-full">Popular</span>}
+                    </td>
                     <td className="py-3 px-5 text-gray-500 text-sm">{row.type}</td>
-                    <td className="py-3 px-4 text-center font-medium">{row.eurusd}</td>
-                    <td className="py-3 px-4 text-center font-medium">{row.gbpusd}</td>
-                    <td className="py-3 px-4 text-center font-medium">{row.usdjpy}</td>
-                    <td className="py-3 px-4 text-center font-medium">{row.gold}</td>
-                    <td className="py-3 px-4 text-center font-medium">{row.oil}</td>
-                    <td className="py-3 px-5 text-center font-bold text-gold-600">{row.commission}</td>
+                    <td className="py-3 px-4 text-center font-semibold text-gray-700">{row.minDeposit}</td>
+                    <td className="py-3 px-4 text-center font-semibold text-green-600">{row.leverage}</td>
+                    <td className="py-3 px-4 text-center font-bold text-gold-600">{row.spreads}</td>
+                    <td className="py-3 px-4 text-center font-semibold text-gray-700">{row.commission}</td>
+                    <td className="py-3 px-4 text-center text-gray-700">{row.minLot}</td>
+                    <td className="py-3 px-5 text-center text-gray-700 text-sm">{row.swapFree}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <p className="text-gray-400 text-xs mt-3">* Spreads are indicative and may vary with market conditions. All values in pips.</p>
+            <p className="text-gray-400 text-xs mt-3">* Spreads are indicative and may vary with market conditions.</p>
           </div>
         )}
 

@@ -88,10 +88,10 @@ export default function PropTrading() {
           ].map(({ icon: Icon, label, value }, i) => (
             <RevealCard key={i} delay={i * 80}>
               <div className="text-center bg-white rounded-2xl p-6 shadow-sm card-hover">
-                <div className="inline-flex p-3 rounded-xl bg-green-100 text-green-600 mb-3">
+                <div className="inline-flex p-3 rounded-xl bg-gold-100 text-gold-600 mb-3">
                   <Icon className="w-5 h-5" />
                 </div>
-                <div className="text-2xl font-bold text-green-600">{value}</div>
+                <div className="text-2xl font-bold text-gold-600">{value}</div>
                 <div className="text-gray-500 text-sm mt-1">{label}</div>
               </div>
             </RevealCard>
@@ -121,12 +121,12 @@ export default function PropTrading() {
               </div>
               <div className="p-4 flex flex-col flex-grow">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-green-400 to-green-600 text-white text-xs font-bold">
+                  <div className="flex items-center justify-center w-7 h-7 rounded-full bg-gradient-to-br from-gold-400 to-gold-600 text-white text-xs font-bold">
                     {PROP_TRADING_VIDEO.id}
                   </div>
-                  <span className="text-xs text-green-600 font-semibold uppercase tracking-wide">Featured Tutorial</span>
+                  <span className="text-xs text-gold-600 font-semibold uppercase tracking-wide">Featured Tutorial</span>
                 </div>
-                <h3 className="font-bold text-base text-gray-900 mb-2 group-hover:text-green-600 transition-colors line-clamp-2">
+                <h3 className="font-bold text-base text-gray-900 mb-2 group-hover:text-gold-600 transition-colors line-clamp-2">
                   {PROP_TRADING_VIDEO.title}
                 </h3>
                 <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">
@@ -146,7 +146,7 @@ export default function PropTrading() {
             return (
               <RevealCard key={i} delay={i * 80}>
                 <div className="bg-white rounded-2xl p-6 border card-hover h-full">
-                  <div className="inline-flex p-3 rounded-xl bg-green-100 text-green-600 mb-4">
+                  <div className="inline-flex p-3 rounded-xl bg-gold-100 text-gold-600 mb-4">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
@@ -165,9 +165,9 @@ export default function PropTrading() {
             const Icon = step.icon
             return (
               <RevealCard key={i} delay={i * 100}>
-                <div className="text-center bg-gradient-to-br from-green-50 to-white rounded-2xl p-8 border-2 border-green-100 card-hover h-full flex flex-col">
-                  <div className="text-5xl font-bold text-green-100 mb-4">{step.step}</div>
-                  <div className="inline-flex p-3 rounded-xl bg-green-100 text-green-600 mb-4 mx-auto">
+                <div className="text-center bg-gradient-to-br from-gold-50 to-white rounded-2xl p-8 border-2 border-gold-100 card-hover h-full flex flex-col">
+                  <div className="text-5xl font-bold text-gold-600 mb-4">{step.step}</div>
+                  <div className="inline-flex p-3 rounded-xl bg-gold-100 text-gold-600 mb-4 mx-auto">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h4 className="font-bold text-lg mb-3">{step.title}</h4>
@@ -186,7 +186,7 @@ export default function PropTrading() {
             {BENEFITS.map((benefit, i) => (
               <RevealCard key={i} delay={i * 40}>
                 <div className="flex items-start gap-3 bg-white rounded-xl p-4 card-hover">
-                  <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="w-5 h-5 text-gold-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 text-sm">{benefit}</span>
                 </div>
               </RevealCard>
@@ -204,9 +204,9 @@ export default function PropTrading() {
             { size: '$200,000', fee: '$999', profit: '10%', drawdown: '5%', popular: false },
           ].map((plan, i) => (
             <RevealCard key={i} delay={i * 100}>
-              <div className={`rounded-2xl p-8 border-2 card-hover ${plan.popular ? 'border-green-500 bg-gradient-to-br from-green-50 to-white shadow-xl scale-105' : 'border-gray-200 bg-white'}`}>
+              <div className={`rounded-2xl p-8 border-2 card-hover ${plan.popular ? 'border-gold-600 bg-gradient-to-br from-gold-50 to-white shadow-xl scale-105' : 'border-gray-200 bg-white'}`}>
                 {plan.popular && (
-                  <div className="inline-block mb-4 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  <div className="inline-block mb-4 bg-gold-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                     MOST POPULAR
                   </div>
                 )}
@@ -217,7 +217,7 @@ export default function PropTrading() {
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-600">One-time Fee:</span>
-                    <span className="font-bold text-green-600">{plan.fee}</span>
+                    <span className="font-bold text-gold-600">{plan.fee}</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-600">Profit Target:</span>
@@ -228,7 +228,7 @@ export default function PropTrading() {
                     <span className="font-bold">{plan.drawdown}</span>
                   </div>
                 </div>
-                <button className={`w-full py-3 rounded-xl font-bold transition-colors ${plan.popular ? 'bg-green-600 text-white hover:bg-green-700' : 'border-2 border-green-600 text-green-600 hover:bg-green-50'}`}>
+                <button className={`w-full py-3 rounded-xl font-bold transition-colors ${plan.popular ? 'bg-gold-600 text-white hover:bg-gold-700' : 'border-2 border-gold-600 text-gold-600 hover:bg-gold-50'}`}>
                   Start Challenge
                 </button>
               </div>
@@ -238,12 +238,12 @@ export default function PropTrading() {
       </Section>
 
       {/* CTA */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16 text-center">
+      <section className="bg-gradient-to-r from-gold-600 to-gold-700 text-white py-16 text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Become a Funded Trader?</h2>
-          <p className="text-green-100 mb-8 text-lg">Join 2,500+ traders already earning with our capital. No personal risk, maximum opportunity.</p>
+          <p className="text-gold-100 mb-8 text-lg">Join 2,500+ traders already earning with our capital. No personal risk, maximum opportunity.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://portal.fexness.com/signup" className="bg-white text-green-600 font-bold px-10 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-xl">
+            <a href="https://portal.fexness.com/signup" className="bg-white text-gold-600 font-bold px-10 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-xl">
               Start Your Challenge
             </a>
             <button className="border-2 border-white text-white font-bold px-10 py-4 rounded-xl hover:bg-white/10 transition-colors">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Copy, TrendingUp, Users, BarChart2, Star, CheckCircle, Play } from 'lucide-react'
+import { Copy, TrendingUp, Users, BarChart2, Star, CheckCircle, Play, Award, Zap, Bot } from 'lucide-react'
 import PageHero from '../components/PageHero'
 import Section from '../components/Section'
 import useScrollReveal from '../hooks/useScrollReveal'
@@ -39,11 +39,31 @@ const TRADERS = [
   { name: 'TrendSniper', country: 'India', followers: 2200, win: 75, gain: '+188%', drawdown: '11%', img: 'https://picsum.photos/seed/trader6/80/80', months: 22 },
 ]
 
-const HOW_STEPS = [
-  { step: '01', title: 'Browse Traders', desc: 'Explore our leaderboard of verified traders with full performance history.' },
-  { step: '02', title: 'Choose & Allocate', desc: 'Select a trader and allocate a portion of your balance to copy their trades.' },
-  { step: '03', title: 'Copy Automatically', desc: 'All trades are replicated in your account proportionally — no manual action required.' },
-  { step: '04', title: 'Manage Anytime', desc: 'Pause, stop, or switch traders at any time with full control over your money.' },
+const COPY_BENEFITS = [
+  'Browse and copy from 500+ verified master traders',
+  'Minimum $50 to start copying traders',
+  'Automatic trade replication in real-time',
+  'Full transparency of trader performance history',
+  'Stop or switch traders anytime with one click',
+  'Risk management tools and stop-loss controls',
+]
+
+const MASTER_BENEFITS = [
+  'Earn commissions from every follower copying your trades',
+  'Build your reputation as a professional trader',
+  'Get verified status and attract more followers',
+  'Access to advanced analytics and follower insights',
+  'No upfront fees - only performance-based earnings',
+  'Dedicated support for master traders',
+]
+
+const EA_BENEFITS = [
+  'Connect your Expert Advisors (EAs) directly to the platform',
+  'Automated trading 24/7 without manual intervention',
+  'Share your EA strategies and earn from followers',
+  'Compatible with MetaTrader 5 platform',
+  'Full control over EA settings and risk parameters',
+  'Track EA performance with detailed analytics',
 ]
 
 export default function CopyTrading() {
@@ -56,43 +76,6 @@ export default function CopyTrading() {
         subtitle="Mirror the trades of top-performing forex traders automatically."
         image="https://picsum.photos/seed/copy/1200/600"
       />
-
-      {/* Stats */}
-      <Section gray>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { icon: Users, label: 'Expert Traders', value: '500+' },
-            { icon: TrendingUp, label: 'Avg Monthly Gain', value: '+12%' },
-            { icon: Copy, label: 'Active Copiers', value: '18,000+' },
-            { icon: Star, label: 'Highest Win Rate', value: '91%' },
-          ].map(({ icon: Icon, label, value }, i) => (
-            <RevealCard key={i} delay={i * 80}>
-              <div className="text-center bg-white rounded-2xl p-6 shadow-sm card-hover">
-                <div className="inline-flex p-3 rounded-xl bg-gold-100 text-gold-600 mb-3">
-                  <Icon className="w-5 h-5" />
-                </div>
-                <div className="text-2xl font-bold text-gold-600">{value}</div>
-                <div className="text-gray-500 text-sm mt-1">{label}</div>
-              </div>
-            </RevealCard>
-          ))}
-        </div>
-      </Section>
-
-      {/* How It Works */}
-      <Section title="How Copy Trading Works">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {HOW_STEPS.map((s, i) => (
-            <RevealCard key={i} delay={i * 100}>
-              <div className="text-center bg-gray-50 rounded-2xl p-6 border card-hover">
-                <div className="text-5xl font-bold text-gold-100 mb-2">{s.step}</div>
-                <h4 className="font-bold mb-2">{s.title}</h4>
-                <p className="text-gray-500 text-sm">{s.desc}</p>
-              </div>
-            </RevealCard>
-          ))}
-        </div>
-      </Section>
 
       {/* Copy Trading Video Tutorials */}
       <Section 
@@ -135,74 +118,114 @@ export default function CopyTrading() {
         </div>
       </Section>
 
-      {/* Trader Leaderboard */}
-      <Section title="Top Traders to Copy" subtitle="Live leaderboard of verified expert traders" gray>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TRADERS.map((trader, i) => (
+      {/* Stats */}
+      <Section gray>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {[
+            { icon: Users, label: 'Active Masters', value: '500+' },
+            { icon: Copy, label: 'Total Followers', value: '18,000+' },
+            { icon: TrendingUp, label: 'Avg Monthly Gain', value: '+12%' },
+            { icon: Star, label: 'Highest Win Rate', value: '91%' },
+          ].map(({ icon: Icon, label, value }, i) => (
             <RevealCard key={i} delay={i * 80}>
-              <div className="bg-white rounded-2xl p-5 border shadow-sm card-hover">
-                <div className="flex items-center gap-3 mb-4">
-                  <img src={trader.img} alt={trader.name} className="w-12 h-12 rounded-full object-cover" />
-                  <div>
-                    <h4 className="font-bold">{trader.name}</h4>
-                    <span className="text-gray-400 text-xs">{trader.country} · {trader.months} months</span>
-                  </div>
-                  <span className="ml-auto text-xs bg-gold-50 text-gold-600 border border-gold-200 px-2 py-0.5 rounded-full font-semibold">{trader.gain}</span>
+              <div className="text-center bg-white rounded-2xl p-6 shadow-sm card-hover">
+                <div className="inline-flex p-3 rounded-xl bg-gold-100 text-gold-600 mb-3">
+                  <Icon className="w-5 h-5" />
                 </div>
-                <div className="grid grid-cols-3 gap-2 text-center text-xs mb-4">
-                  <div className="bg-gray-50 rounded-lg p-2">
-                    <div className="font-bold text-gray-700">{trader.win}%</div>
-                    <div className="text-gray-400">Win Rate</div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-2">
-                    <div className="font-bold text-red-400">{trader.drawdown}</div>
-                    <div className="text-gray-400">Max DD</div>
-                  </div>
-                  <div className="bg-gray-50 rounded-lg p-2">
-                    <div className="font-bold text-gray-700">{trader.followers.toLocaleString()}</div>
-                    <div className="text-gray-400">Copiers</div>
-                  </div>
-                </div>
-                <button
-                  onClick={() => setSelected(trader.name === selected ? null : trader.name)}
-                  className={`w-full py-2 rounded-xl text-sm font-semibold transition-colors ${selected === trader.name ? 'bg-gold-500 text-white' : 'border border-gold-500 text-gold-600 hover:bg-gold-50'}`}
-                >
-                  {selected === trader.name ? '✓ Copying' : 'Copy Trader'}
-                </button>
+                <div className="text-2xl font-bold text-gold-600">{value}</div>
+                <div className="text-gray-500 text-sm mt-1">{label}</div>
               </div>
             </RevealCard>
           ))}
         </div>
       </Section>
 
-      {/* Benefits */}
-      <Section title="Why Copy Trade with Fexness?">
+      {/* Copy Trade Section */}
+      <Section title="Copy Trade" subtitle="Follow and automatically copy successful traders">
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="space-y-3">
-            {[
-              'Zero commissions on copy trading positions',
-              'Proportional copying — you stay in control of risk',
-              'Full transparency — see trader history, strategy, drawdown',
-              'Set your own stop-loss per trader',
-              'Minimum $50 to start copying',
-              'Switch or stop copying at any time',
-              'Copy multiple traders simultaneously',
-            ].map((item, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-gold-500 flex-shrink-0" />
-                <span className="text-gray-700 text-sm">{item}</span>
-              </div>
-            ))}
+          <div className="space-y-4">
+            <div className="inline-flex p-3 rounded-xl bg-blue-100 text-blue-600 mb-2">
+              <Copy className="w-6 h-6" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">Start Copying Professional Traders</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Copy the trades of experienced and verified master traders automatically. No trading knowledge required - just choose a trader and let the system replicate their trades in your account.
+            </p>
+            <div className="space-y-3 pt-2">
+              {COPY_BENEFITS.map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <a href="/portal" className="inline-block mt-4 bg-gold-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-gold-700 transition-colors">
+              Browse Traders
+            </a>
           </div>
-          <img src="https://picsum.photos/seed/copy2/600/400" alt="Copy Trading" className="rounded-2xl shadow-lg" />
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Copy Trading" className="rounded-2xl shadow-lg" />
+        </div>
+      </Section>
+
+      {/* Master Section */}
+      <Section title="Become a Master" subtitle="Share your trading expertise and earn commissions" gray>
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Master Trader" className="rounded-2xl shadow-lg md:order-2" />
+          <div className="space-y-4 md:order-1">
+            <div className="inline-flex p-3 rounded-xl bg-purple-100 text-purple-600 mb-2">
+              <Award className="w-6 h-6" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">Earn as a Master Trader</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Are you a successful trader? Become a Master and earn commissions from traders who copy your strategies. Build your reputation and grow your income while trading.
+            </p>
+            <div className="space-y-3 pt-2">
+              {MASTER_BENEFITS.map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <a href="/portal" className="inline-block mt-4 bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-purple-700 transition-colors">
+              Apply as Master
+            </a>
+          </div>
+        </div>
+      </Section>
+
+      {/* Trade from EA Section */}
+      <Section title="Trade from EA" subtitle="Automate your trading with Expert Advisors">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div className="space-y-4">
+            <div className="inline-flex p-3 rounded-xl bg-green-100 text-green-600 mb-2">
+              <Bot className="w-6 h-6" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-800">Automated Trading with EAs</h3>
+            <p className="text-gray-600 leading-relaxed">
+              Use Expert Advisors (EAs) to automate your trading strategies. Connect your MT5 EAs and let them trade 24/7. Share your EA strategies and earn from followers.
+            </p>
+            <div className="space-y-3 pt-2">
+              {EA_BENEFITS.map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <a href="/portal" className="inline-block mt-4 bg-green-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-green-700 transition-colors">
+              Connect Your EA
+            </a>
+          </div>
+          <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&h=400&fit=crop" alt="Expert Advisors" className="rounded-2xl shadow-lg" />
         </div>
       </Section>
 
       {/* CTA */}
       <section className="bg-gold-600 text-white py-14 text-center">
-        <h2 className="text-3xl font-bold mb-4">Start Copy Trading Today</h2>
-        <p className="text-gold-100 mb-8">Join 18,000+ traders already copying the pros. No experience needed.</p>
-  <a href="https://portal.fexness.com/signup" className="bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">Open Free Account</a>
+        <h2 className="text-3xl font-bold mb-4">Ready to Start Copy Trading?</h2>
+        <p className="text-gold-100 mb-8">Join thousands of traders already copying successful strategies. No experience needed.</p>
+        <a href="https://portal.fexness.com/signup" className="bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">Get Started Now</a>
       </section>
     </div>
   )

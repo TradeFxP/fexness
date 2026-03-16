@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import {
   Menu, X, ChevronDown, Globe, BarChart2, BookOpen,
-  Wrench, Newspaper, HelpCircle, Phone, ShieldCheck, Users, TrendingUp, Mail, MapPin, Clock
+  Wrench, Newspaper, HelpCircle, Phone, ShieldCheck, Users, TrendingUp, Mail, MapPin, Clock, Briefcase
 } from 'lucide-react'
 
 const NAV = [
@@ -47,6 +47,7 @@ const NAV = [
       { label: 'Help Center', to: '/support', icon: HelpCircle },
       { label: 'FAQ', to: '/faq', icon: HelpCircle },
       { label: 'Contact Us', to: '/contact', icon: Phone },
+      { label: 'Careers', to: '/careers', icon: Briefcase },
     ]
   },
 ]
