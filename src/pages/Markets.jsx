@@ -22,25 +22,25 @@ const DATA = {
     { pair: 'USD/CHF', spread: '0.5', leverage: '1:1000', min: '0.01' },
   ],
   Metals: [
-    { pair: 'XAU/USD (Gold)', spread: '0.25', leverage: '1:100', min: '0.01' },
-    { pair: 'XAG/USD (Silver)', spread: '0.02', leverage: '1:100', min: '0.01' },
-    { pair: 'XPT/USD (Platinum)', spread: '1.5', leverage: '1:50', min: '0.01' },
+    { pair: 'XAU/USD (Gold)', spread: '0.25', leverage: '1:1000', min: '0.01' },
+    { pair: 'XAG/USD (Silver)', spread: '0.02', leverage: '1:1000', min: '0.01' },
+    { pair: 'XPT/USD (Platinum)', spread: '1.5', leverage: '1:1000', min: '0.01' },
   ],
   Indices: [
-    { pair: 'US30 (Dow Jones)', spread: '2.0', leverage: '1:100', min: '0.01' },
-    { pair: 'SPX500', spread: '0.5', leverage: '1:100', min: '0.01' },
-    { pair: 'NAS100', spread: '1.0', leverage: '1:100', min: '0.01' },
-    { pair: 'GER40 (DAX)', spread: '1.5', leverage: '1:100', min: '0.01' },
+    { pair: 'US30 (Dow Jones)', spread: '2.0', leverage: '1:1000', min: '0.01' },
+    { pair: 'SPX500', spread: '0.5', leverage: '1:1000', min: '0.01' },
+    { pair: 'NAS100', spread: '1.0', leverage: '1:1000', min: '0.01' },
+    { pair: 'GER40 (DAX)', spread: '1.5', leverage: '1:1000', min: '0.01' },
   ],
   Energies: [
-    { pair: 'WTI Crude Oil', spread: '0.04', leverage: '1:50', min: '0.01' },
-    { pair: 'Brent Oil', spread: '0.05', leverage: '1:50', min: '0.01' },
-    { pair: 'Natural Gas', spread: '0.005', leverage: '1:50', min: '0.01' },
+    { pair: 'WTI Crude Oil', spread: '0.04', leverage: '1:1000', min: '0.01' },
+    { pair: 'Brent Oil', spread: '0.05', leverage: '1:1000', min: '0.01' },
+    { pair: 'Natural Gas', spread: '0.005', leverage: '1:1000', min: '0.01' },
   ],
   'Crypto CFDs': [
-    { pair: 'BTC/USD', spread: '25', leverage: '1:10', min: '0.01' },
-    { pair: 'ETH/USD', spread: '2', leverage: '1:10', min: '0.01' },
-    { pair: 'LTC/USD', spread: '0.5', leverage: '1:10', min: '0.01' },
+    { pair: 'BTC/USD', spread: '25', leverage: '1:1000', min: '0.01' },
+    { pair: 'ETH/USD', spread: '2', leverage: '1:1000', min: '0.01' },
+    { pair: 'LTC/USD', spread: '0.5', leverage: '1:1000', min: '0.01' },
   ],
 }
 
