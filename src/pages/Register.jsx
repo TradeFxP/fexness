@@ -9,7 +9,7 @@ export default function Register() {
       <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8">
         <div className="text-center mb-6">
           <div className="flex justify-center mb-2">
-            <img src="/images/fexness-logo.png" alt="Fexness" className="w-[220px] h-auto" />
+            <img src="/images/LOGO-.png" alt="DojiFx" className="w-[220px] h-auto" />
           </div>
           <h1 className="text-2xl font-bold text-gray-800">Create Free Account</h1>
           <p className="text-gray-500 text-sm mt-1">Join 200,000+ traders worldwide</p>
@@ -75,7 +75,7 @@ export default function Register() {
         </form>
         <p className="text-center text-sm text-gray-500 mt-6">
           Already have an account?{" "}
-          <a href="https://portal.fexness.com/login" className="text-gold-600 font-semibold hover:underline">Sign in</a>
+          <a href="https://portal.DojiFx.com/login" className="text-gold-600 font-semibold hover:underline">Sign in</a>
         </p>
       </div>
     </div>

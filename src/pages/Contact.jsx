@@ -24,20 +24,20 @@ export default function Contact() {
           </div>
           <div className="space-y-4">
             {[
-              {icon:Phone,title:'Fexness Hotline',body:'+44 7853 329918'},
+              {icon:Phone,title:'DojiFx Hotline',body:'+44 7853 329918'},
               {icon:MapPin,title:'London Office',body:'123 Financial District, Canary Wharf, London E14 5AB, United Kingdom'},
               {icon:MapPin,title:'New York Office',body:'456 Wall Street, Financial District, New York, NY 10005, USA'},
-              {icon:Mail,title:'General Support',body:'support@fexness.com'},
+              {icon:Mail,title:'General Support',body:'support@dojifx.com'},
               {icon:Clock,title:'Business Hours',body:'Mon–Fri: 9 AM – 6 PM GMT | Weekends: Email only'}
             ].map(({icon:Icon,title,body},i)=>(
               <div key={i} className="bg-gray-50 rounded-2xl p-5 flex gap-4">
                 <div className="p-3 rounded-xl bg-gold-100 text-gold-600 flex-shrink-0"><Icon className="w-5 h-5" /></div>
                 <div>
                   <h4 className="font-bold">{title}</h4>
-                  {title === 'Fexness Hotline' ? (
+                  {title === 'DojiFx Hotline' ? (
                     <a href="tel:+447853329918" className="text-gold-600 hover:text-gold-700 text-sm mt-0.5 block">{body}</a>
                   ) : title === 'General Support' ? (
-                    <a href="mailto:support@fexness.com" className="text-gold-600 hover:text-gold-700 text-sm mt-0.5 block">{body}</a>
+                    <a href="mailto:support@dojifx.com" className="text-gold-600 hover:text-gold-700 text-sm mt-0.5 block">{body}</a>
                   ) : (
                     <p className="text-gray-500 text-sm mt-0.5">{body}</p>
                   )}
@@ -50,16 +50,18 @@ export default function Contact() {
               <h4 className="font-bold text-lg mb-3 text-gray-900">Department Contact</h4>
               <div className="grid grid-cols-1 gap-2 text-sm">
                 {[
-                  {dept: 'Accounts', email: 'accounts@fexness.com'},
-                  {dept: 'Admin', email: 'admin@fexness.com'},
-                  {dept: 'Career', email: 'career@fexness.com'},
-                  {dept: 'HR', email: 'hr@fexness.com'},
-                  {dept: 'Info', email: 'info@fexness.com'},
-                  {dept: 'Investor Relations', email: 'investor@fexness.com'},
-                  {dept: 'Marketing', email: 'marketing@fexness.com'},
-                  {dept: 'Partnerships', email: 'partner@fexness.com'},
-                  {dept: 'Sales', email: 'sales@fexness.com'},
-                  {dept: 'Technical Support', email: 'tech@fexness.com'},
+                  {dept: 'Accounts', email: 'accounts@dojifx.com'},
+                  {dept: 'Info', email: 'info@dojifx.com'},
+                  {dept: 'Contact', email: 'contact@dojifx.com'},
+                  {dept: 'Sales', email: 'sales@dojifx.com'},
+                  {dept: 'Partnerships', email: 'partner@dojifx.com'},
+                  {dept: 'Career', email: 'career@dojifx.com'},
+                  {dept: 'HR', email: 'hr@dojifx.com'},
+                  {dept: 'Office', email: 'office@dojifx.com'},
+                  {dept: 'Admin', email: 'admin@dojifx.com'},
+                  {dept: 'Technical Support', email: 'tech@dojifx.com'},
+                  {dept: 'Marketing', email: 'marketing@dojifx.com'},
+                  {dept: 'Investor Relations', email: 'investor@dojifx.com'},
                 ].map(({dept, email}, i) => (
                   <div key={i} className="flex justify-between items-center py-2 border-b border-gold-200 last:border-0">
                     <span className="font-medium text-gray-700">{dept}:</span>
@@ -71,11 +73,11 @@ export default function Contact() {
             
             <div className="flex gap-3 pt-2">
               {[
-                {Icon: Linkedin, href: 'https://linkedin.com/company/fexness'},
-                {Icon: Twitter, href: 'https://x.com/fexnessofficial'},
-                {Icon: Facebook, href: 'https://www.facebook.com/fexnessofficial'},
-                {Icon: Youtube, href: 'https://www.youtube.com/@Fexness'},
-                {Icon: Send, href: 'https://t.me/fexnesstech'}
+                {Icon: Linkedin, href: 'https://linkedin.com/company/DojiFx'},
+                {Icon: Twitter, href: 'https://x.com/DojiFxofficial'},
+                {Icon: Facebook, href: 'https://www.facebook.com/DojiFxofficial'},
+                {Icon: Youtube, href: 'https://www.youtube.com/@DojiFx'},
+                {Icon: Send, href: 'https://t.me/DojiFxtech'}
               ].map(({Icon, href},i)=>(
                 <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="p-3 rounded-xl bg-gray-100 hover:bg-gold-500 hover:text-white text-gray-600 transition-all"><Icon className="w-5 h-5" /></a>
               ))}

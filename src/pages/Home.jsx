@@ -319,10 +319,10 @@ export default function Home() {
                 Experience lightning-fast execution, advanced charting tools, and seamless multi-device access — powered by cutting-edge brokerage technology.
               </p>
               <div className="flex flex-wrap gap-4 mb-8 lg:mb-12">
-                <a href="https://portal.fexness.com/signup" className="bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold px-8 md:px-10 py-3 md:py-4 rounded-xl hover:from-gold-600 hover:to-gold-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2 text-base md:text-lg">
+                <a href="https://portal.dojifx.com/signup" className="bg-gradient-to-r from-gold-500 to-gold-600 text-white font-bold px-8 md:px-10 py-3 md:py-4 rounded-xl hover:from-gold-600 hover:to-gold-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 flex items-center gap-2 text-base md:text-lg">
                   Open Live Account <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                 </a>
-                <a href="https://portal.fexness.com/signup" className="border-2 border-gold-600 text-gold-600 font-bold px-8 md:px-10 py-3 md:py-4 rounded-xl hover:bg-gold-50 transition-all text-base md:text-lg">
+                <a href="https://portal.dojifx.com/signup" className="border-2 border-gold-600 text-gold-600 font-bold px-8 md:px-10 py-3 md:py-4 rounded-xl hover:bg-gold-50 transition-all text-base md:text-lg">
                   Try Free Demo
                 </a>
               </div>
@@ -590,7 +590,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <a href="https://portal.fexness.com/signup" className={`block text-center py-3 rounded-xl font-bold transition-all ${
+                <a href="https://portal.dojifx.com/signup" className={`block text-center py-3 rounded-xl font-bold transition-all ${
                   account.popular 
                     ? 'bg-white text-gold-600 hover:bg-gray-100 shadow-lg' 
                     : 'bg-gold-600 text-white hover:bg-gold-700'
@@ -678,7 +678,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <div className="inline-block mb-4">
                 <span className="px-6 py-2 bg-gradient-to-r from-gold-400 to-orange-400 text-white rounded-full text-sm font-bold shadow-lg">
-                  🌟 About Fexness
+                  🌟 About DojiFx
                 </span>
               </div>
               <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-gold-600 to-gray-900 bg-clip-text text-transparent">
@@ -708,7 +708,7 @@ export default function Home() {
             <div className="space-y-6 leading-relaxed">
               <div className="bg-white rounded-3xl p-8 border-2 border-gold-200 hover:border-gold-500 transition-all duration-300 hover:shadow-2xl shadow-lg">
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
-                  Founded with a vision to <span className="text-gold-600 font-bold">democratize</span> <span className="text-gray-900 font-bold">Forex trading</span>, Fexness emerged from a simple belief: every trader deserves access to professional-grade tools, transparent pricing, and exceptional support.
+                  Founded with a vision to <span className="text-gold-600 font-bold">democratize</span> <span className="text-gray-900 font-bold">Forex trading</span>, DojiFx emerged from a simple belief: every trader deserves access to professional-grade tools, transparent pricing, and exceptional support.
                 </p>
               </div>
               
@@ -720,7 +720,7 @@ export default function Home() {
               
               <div className="bg-white rounded-3xl p-8 border-2 border-gold-200 hover:border-gold-500 transition-all duration-300 hover:shadow-2xl shadow-lg">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Our journey is driven by <span className="text-gold-600 font-bold">innovation</span> <span className="text-gold-600 font-bold">integrity</span> and <span className="text-gold-600 font-bold">an unwavering commitment</span> to our traders' success. Fexness don't just facilitate trades—we empower traders to reach their full potential.
+                  Our journey is driven by <span className="text-gold-600 font-bold">innovation</span> <span className="text-gold-600 font-bold">integrity</span> and <span className="text-gold-600 font-bold">an unwavering commitment</span> to our traders' success. DojiFx don't just facilitate trades—we empower traders to reach their full potential.
                 </p>
               </div>
             </div>
@@ -728,20 +728,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Fexness */}
+      {/* Why Choose DojiFx */}
       <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-block mb-4 animate-bounce">
               <span className="px-4 py-2 bg-gold-500 text-white rounded-full text-sm font-semibold shadow-lg">
-                ⭐ Why Fexness?
+                ⭐ Why DojiFx?
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Why Choose <span className="text-gold-600">Fexness</span>?
+              Why Choose <span className="text-gold-600">DojiFx</span>?
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-              Choosing the right broker is one of the most important decisions for any trader. Here's why many traders worldwide choose Fexness:
+              Choosing the right broker is one of the most important decisions for any trader. Here's why many traders worldwide choose DojiFx:
             </p>
           </div>
 
@@ -755,7 +755,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Strong Regulation & Transparency</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Fexness operates under regulatory licenses across different jurisdictions, ensuring compliance, client protection, and transparent business practices.
+                    DojiFx operates under regulatory licenses across different jurisdictions, ensuring compliance, client protection, and transparent business practices.
                   </p>
                 </div>
               </div>
@@ -770,7 +770,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Fast & Reliable Deposits & Withdrawals</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Fexness is known for fast deposit & withdrawal processing, with many kinds of payment methods offering instant or near-instant transactions, subject to payment provider conditions.
+                    DojiFx is known for fast deposit & withdrawal processing, with many kinds of payment methods offering instant or near-instant transactions, subject to payment provider conditions.
                   </p>
                 </div>
               </div>
@@ -886,7 +886,7 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">Suitable for All Trader Levels</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Whether you are a beginner or an experienced professional, Fexness offers account types and tools designed to meet various trading strategies.
+                    Whether you are a beginner or an experienced professional, DojiFx offers account types and tools designed to meet various trading strategies.
                   </p>
                 </div>
               </div>
@@ -919,7 +919,7 @@ export default function Home() {
               Important Information & Disclosures
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Please read the following carefully before trading with Fexness Limited
+              Please read the following carefully before trading with DojiFx Limited
             </p>
           </div>
 
@@ -933,17 +933,17 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Risk Warning</h3>
                 <div className="text-gray-700 leading-relaxed space-y-3">
                   <p>
-                    An investment in derivatives may mean investors may lose an amount even greater than their original investment. Anyone wishing to invest in any of the products mentioned in Fexness should seek their own financial or professional advice. Trading of securities, Forex, stock market, commodities, options and futures may not be suitable for everyone and involves the risk of losing part or all of your money.
+                    An investment in derivatives may mean investors may lose an amount even greater than their original investment. Anyone wishing to invest in any of the products mentioned in DojiFx should seek their own financial or professional advice. Trading of securities, Forex, stock market, commodities, options and futures may not be suitable for everyone and involves the risk of losing part or all of your money.
                   </p>
                   <p>
                     Trading in the financial markets has large potential rewards, but also large potential risk. You must be aware of the risks and be willing to accept them in order to invest in the markets. Don't invest and trade with money which you can't afford to lose. Forex Trading are not allowed in some countries, before investing your money, make sure whether your country is allowing this or not.
                   </p>
                   <p>
-                    You are strongly advised to obtain independent financial, legal and tax advice before proceeding with any currency or spot metals trade. Nothing in this site should be read or construed as constituting advice on the part of Fexness Limited or any of its affiliates, directors, officers or employees.
+                    You are strongly advised to obtain independent financial, legal and tax advice before proceeding with any currency or spot metals trade. Nothing in this site should be read or construed as constituting advice on the part of DojiFx Limited or any of its affiliates, directors, officers or employees.
                   </p>
                   <div className="bg-orange-100 border-l-4 border-orange-600 p-4 rounded mt-4">
                     <p className="font-semibold text-gray-900">
-                      <strong>Restricted Regions:</strong> Fexness Limited does not provide services for citizens/residents of USA, Venezuela, Ukraine, Iran, Cuba, Myanmar, North Korea, Sudan. The services of Fexness Limited are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
+                      <strong>Restricted Regions:</strong> DojiFx Limited does not provide services for citizens/residents of USA, Venezuela, Ukraine, Iran, Cuba, Myanmar, North Korea, Sudan. The services of DojiFx Limited are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
                     </p>
                   </div>
                 </div>
@@ -963,7 +963,7 @@ export default function Home() {
               </div>
               <div className="text-gray-700 leading-relaxed space-y-3">
                 <p>
-                  <strong className="text-gray-900">Fexness Limited</strong> is Registered in ANGUILLA Registry of (ARCA).
+                  <strong className="text-gray-900">DojiFx Limited</strong> is Registered in ANGUILLA Registry of (ARCA).
                 </p>
                 <div className="bg-gray-50 rounded-lg p-4 space-y-2">
                   <p className="flex items-center gap-2">
@@ -993,7 +993,7 @@ export default function Home() {
                 <div className="border-l-4 border-gold-500 pl-4">
                   <p className="font-bold text-gray-900 mb-2">Trading Policy:</p>
                   <p className="text-sm">
-                    At Fexness, we allow High-Frequency Trading (HFT), arbitrage, or scalping with a duration of less than 180 seconds. However, we do permit scalping trades that last longer than 180 seconds and so, provided the client holds the position. Low spreads and zero commission depends on the product and account type. We provide an execution-only service. We do not provide investment advice or management services.
+                    At DojiFx, we allow High-Frequency Trading (HFT), arbitrage, or scalping with a duration of less than 180 seconds. However, we do permit scalping trades that last longer than 180 seconds and so, provided the client holds the position. Low spreads and zero commission depends on the product and account type. We provide an execution-only service. We do not provide investment advice or management services.
                   </p>
                 </div>
                 <div className="border-l-4 border-gold-500 pl-4">
@@ -1005,7 +1005,7 @@ export default function Home() {
                 <div className="border-l-4 border-red-500 pl-4">
                   <p className="font-bold text-gray-900 mb-2">⚠️ Fraud Warning:</p>
                   <p className="text-sm">
-                    It has come our attention that fraudulent websites are impersonating our brand using fake or lookalike domains. Please note that we do not promote any get rich quick schemes. Our official website is <strong className="text-gold-600">fexness.com</strong>. Stay vigilant & verify website URLs before engaging with any platform.
+                    It has come our attention that fraudulent websites are impersonating our brand using fake or lookalike domains. Please note that we do not promote any get rich quick schemes. Our official website is <strong className="text-gold-600">DojiFx.com</strong>. Stay vigilant & verify website URLs before engaging with any platform.
                   </p>
                 </div>
               </div>

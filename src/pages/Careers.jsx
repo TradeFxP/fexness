@@ -174,13 +174,13 @@ export default function Careers() {
   return (
     <div>
       <PageHero
-        title="Join the Fexness Team"
+        title="Join the DojiFx Team"
         subtitle="Build your career in the exciting world of forex trading. Work with talented people, cutting-edge technology, and global markets."
         image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&h=600&fit=crop"
       />
 
-      {/* Why Join Fexness */}
-      <Section title="Why Work at Fexness?" subtitle="We're building the future of trading together">
+      {/* Why Join DojiFx */}
+      <Section title="Why Work at DojiFx?" subtitle="We're building the future of trading together">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {VALUES.map((value, i) => {
             const Icon = value.icon
@@ -247,7 +247,7 @@ export default function Careers() {
                       {position.type}
                     </span>
                     <a 
-                      href="mailto:career@fexness.com" 
+                      href="mailto:career@DojiFx.com" 
                       className="flex items-center gap-2 text-gold-600 hover:text-gold-700 font-semibold text-sm transition-colors"
                     >
                       Apply Now <ArrowRight className="w-4 h-4" />
@@ -269,7 +269,7 @@ export default function Careers() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="mailto:career@fexness.com" 
+              href="mailto:career@DojiFx.com" 
               className="bg-white text-gold-600 font-bold px-8 py-4 rounded-xl hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl"
             >
               Send Your Resume

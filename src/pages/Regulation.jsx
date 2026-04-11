@@ -14,7 +14,7 @@ function RevealCard({ children, delay = 0 }) {
 }
 
 const PILLARS = [
-  { icon: ShieldCheck, title: 'ARCA Licensed', desc: 'Fexness is authorized and regulated by ARCA (Anguilla Regulatory and Compliance Authority), ensuring full compliance with international financial standards.' },
+  { icon: ShieldCheck, title: 'ARCA Licensed', desc: 'DojiFx is authorized and regulated by ARCA (Anguilla Regulatory and Compliance Authority), ensuring full compliance with international financial standards.' },
   { icon: Lock, title: 'Segregated Funds', desc: 'All client funds are held in segregated accounts at Tier-1 banks, completely separate from our operational funds.' },
   { icon: FileText, title: 'AML & KYC Policy', desc: 'We implement strict Anti-Money Laundering and Know Your Customer procedures to prevent financial crime and protect our platform.' },
   { icon: AlertCircle, title: 'Risk Disclosure', desc: 'We proactively disclose trading risks to all clients. CFDs are complex instruments and carry high risk of losing money rapidly.' },
@@ -60,7 +60,7 @@ export default function Regulation() {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold">ARCA Regulation</h3>
             <p className="text-gray-500 leading-relaxed">
-              Fexness operates under the regulatory oversight of ARCA (Anguilla Regulatory and Compliance Authority). 
+              DojiFx operates under the regulatory oversight of ARCA (Anguilla Regulatory and Compliance Authority). 
               We adhere to strict international standards for financial services, ensuring transparency, security, and client protection.
             </p>
             {[

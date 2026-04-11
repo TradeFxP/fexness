@@ -14,14 +14,14 @@ function RevealCard({ children, delay = 0 }) {
 }
 
 const REASONS = [
-  { icon: ShieldCheck, title: 'Strong Regulation & Transparency', desc: 'Fexness operates under regulatory licenses across different jurisdictions, ensuring compliance, client protection, and transparent business practices.' },
-  { icon: Zap, title: 'Fast & Reliable Deposits & Withdrawals', desc: 'Fexness is known for fast deposit & withdrawal processing, with many kinds of payment methods offering instant or near-instant transactions, subject to payment provider conditions.' },
+  { icon: ShieldCheck, title: 'Strong Regulation & Transparency', desc: 'DojiFx operates under regulatory licenses across different jurisdictions, ensuring compliance, client protection, and transparent business practices.' },
+  { icon: Zap, title: 'Fast & Reliable Deposits & Withdrawals', desc: 'DojiFx is known for fast deposit & withdrawal processing, with many kinds of payment methods offering instant or near-instant transactions, subject to payment provider conditions.' },
   { icon: DollarSign, title: 'Competitive Trading Conditions', desc: 'Tight spreads, flexible leverage options, low minimum deposits, and multiple account types for different trading styles.' },
   { icon: BarChart2, title: 'Advanced Trading Platforms', desc: 'Trade on industry-leading platforms with powerful charting tools, automated trading (EAs), and real-time market execution.' },
   { icon: Globe, title: 'Wide Range of Instruments', desc: 'Access a broad selection of markets including Forex currency pairs, Commodities, Indices, Stocks, and Cryptocurrencies (Where permitted by regulation).' },
   { icon: Lock, title: 'Transparent Pricing', desc: 'No hidden fees, clear swap policies, and detailed contract specifications available to clients.' },
   { icon: Headphones, title: '24/7 Customer Support', desc: 'Multilingual support is available to assist traders across different time zones.' },
-  { icon: TrendingUp, title: 'Suitable for All Trader Levels', desc: 'Whether you are a beginner or an experienced professional, Fexness offers account types and tools designed to meet various trading strategies.' },
+  { icon: TrendingUp, title: 'Suitable for All Trader Levels', desc: 'Whether you are a beginner or an experienced professional, DojiFx offers account types and tools designed to meet various trading strategies.' },
 ]
 
 const COMPARE = [
@@ -41,7 +41,7 @@ export default function WhyUs() {
   return (
     <div>
       <PageHero
-        title="Why Choose Fexness?"
+        title="Why Choose DojiFx?"
         subtitle="Choosing the right broker is one of the most important decisions for any trader."
         image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop"
       />
@@ -64,13 +64,13 @@ export default function WhyUs() {
       </Section>
 
       {/* Comparison Table */}
-      <Section title="Fexness vs Others" subtitle="See how we outperform the competition" gray>
+      <Section title="DojiFx vs Others" subtitle="See how we outperform the competition" gray>
         <div className="max-w-5xl mx-auto">
           <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 flex items-start gap-3">
             <ShieldCheck className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
             <div className="text-sm text-blue-800">
               <strong>Why Compare?</strong> Understanding broker differences helps you make informed decisions. 
-              See how Fexness delivers superior value across all key metrics.
+              See how DojiFx delivers superior value across all key metrics.
             </div>
           </div>
 
@@ -82,7 +82,7 @@ export default function WhyUs() {
                   <th className="text-center py-5 px-6 font-bold text-base">
                     <div className="flex items-center justify-center gap-2">
                       <ShieldCheck className="w-5 h-5" />
-                      Fexness
+                      DojiFx
                     </div>
                   </th>
                   <th className="text-center py-5 px-6 font-bold text-base">Other Brokers</th>
@@ -119,7 +119,7 @@ export default function WhyUs() {
 
           {/* Summary Box */}
           <div className="mt-8 bg-gradient-to-r from-gold-600 to-gold-700 text-white rounded-2xl p-6 text-center">
-            <h3 className="text-2xl font-bold mb-2">The Fexness Advantage</h3>
+            <h3 className="text-2xl font-bold mb-2">The DojiFx Advantage</h3>
             <p className="text-gold-100">
               Superior trading conditions, transparent pricing, and unmatched execution speed. 
               Join thousands of satisfied traders worldwide.
@@ -161,7 +161,7 @@ export default function WhyUs() {
           <h2 className="text-3xl font-bold mb-4">Ready to Experience the Difference?</h2>
           <p className="text-gold-100 mb-8">Open a live account in minutes with just $10 minimum deposit.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://portal.fexness.com/signup" className="bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">Open Account</a>
+            <a href="https://portal.dojifx.com/signup" className="bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">Open Account</a>
             <a href="/contact" className="border border-white text-white font-semibold px-8 py-3 rounded-xl hover:bg-gold-700 transition-colors">Talk to Us</a>
           </div>
         </div>

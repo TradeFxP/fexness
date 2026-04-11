@@ -86,7 +86,7 @@ const FEES = [
   { type: 'Spreads', desc: 'Included in the price for Classic/Premium. Raw spreads from 0.0 pips on ECN accounts.' },
   { type: 'Commission', desc: 'ECN accounts: $3 per lot per side ($6 round-trip). Classic & Premium: zero commission.' },
   { type: 'Overnight Swap', desc: 'Positions held overnight incur swap fees. Rates vary by instrument and direction. Islamic accounts are swap-free.' },
-  { type: 'Deposits / Withdrawals', desc: 'Fexness charges ZERO fees on deposits or withdrawals. Third-party processor fees may apply.' },
+  { type: 'Deposits / Withdrawals', desc: 'DojiFx charges ZERO fees on deposits or withdrawals. Third-party processor fees may apply.' },
   { type: 'Inactivity Fee', desc: '$10/month after 90 days of no trading activity on funded accounts.' },
   { type: 'Currency Conversion', desc: '0.5% fee on currency conversion when depositing in a currency different from your account base currency.' },
 ]

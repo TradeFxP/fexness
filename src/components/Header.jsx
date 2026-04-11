@@ -19,7 +19,7 @@ const NAV = [
     label: 'Company',
     items: [
       { label: 'About Us', to: '/about', icon: Globe },
-      { label: 'Why Fexness', to: '/why-us', icon: ShieldCheck },
+      { label: 'Why DojiFx', to: '/why-us', icon: ShieldCheck },
       { label: 'Regulation & Security', to: '/regulation', icon: ShieldCheck },
       { label: 'IB / Affiliate', to: '/ib', icon: Users },
     ]
@@ -112,9 +112,9 @@ export default function Header() {
             +44 7853 329918
           </a>
           <span>|</span>
-          <a href="mailto:support@fexness.com" className="flex items-center gap-1 hover:text-white transition-colors">
+          <a href="mailto:support@dojifx.com" className="flex items-center gap-1 hover:text-white transition-colors">
             <Mail className="w-3 h-3" />
-            support@fexness.com
+            support@dojifx.com
           </a>
           <span>|</span>
           <span className="flex items-center gap-1">
@@ -132,7 +132,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src="/images/fexness-logo.png" alt="Fexness Logo" className="w-[200px] h-auto" />
+            <img src="/images/LOGO-.png" alt="DojiFx Logo" className="w-[180px] h-auto" />
           </Link>
 
           {/* Desktop Nav */}
@@ -143,8 +143,8 @@ export default function Header() {
 
           {/* CTA buttons */}
           <div className="hidden lg:flex items-center gap-2">
-            <a href="https://portal.fexness.com/login" className="px-4 py-2 rounded-lg text-sm font-semibold border-2 border-[#d3a21a] text-[#d3a21a] hover:bg-[#d3a21a] hover:text-white transition-colors">Sign In</a>
-            <a href="https://portal.fexness.com/signup" className="px-4 py-2 rounded-lg text-sm font-semibold bg-[#d3a21a] text-white hover:bg-[#b8901a] transition-colors">Signup</a>
+            <a href="https://portal.DojiFx.com/login" className="px-4 py-2 rounded-lg text-sm font-semibold border-2 border-[#d3a21a] text-[#d3a21a] hover:bg-[#d3a21a] hover:text-white transition-colors">Sign In</a>
+            <a href="https://portal.dojifx.com/signup" className="px-4 py-2 rounded-lg text-sm font-semibold bg-[#d3a21a] text-white hover:bg-[#b8901a] transition-colors">Signup</a>
           </div>
 
           {/* Mobile toggle */}
@@ -183,8 +183,8 @@ export default function Header() {
               </div>
             ))}
             <div className="pt-4 flex flex-col gap-2">
-              <a href="https://portal.fexness.com/login" className="border-2 border-[#d3a21a] text-[#d3a21a] hover:bg-[#d3a21a] hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold">Sign In</a>
-              <a href="https://portal.fexness.com/signup" className="bg-[#d3a21a] text-white hover:bg-[#b8901a] transition-colors text-center py-2 rounded-lg text-sm font-semibold">Signup</a>
+              <a href="https://portal.DojiFx.com/login" className="border-2 border-[#d3a21a] text-[#d3a21a] hover:bg-[#d3a21a] hover:text-white transition-colors text-center py-2 rounded-lg text-sm font-semibold">Sign In</a>
+              <a href="https://portal.dojifx.com/signup" className="bg-[#d3a21a] text-white hover:bg-[#b8901a] transition-colors text-center py-2 rounded-lg text-sm font-semibold">Signup</a>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ export default function Login() {
       <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8">
         <div className="text-center mb-6">
           <div className="flex justify-center mb-2">
-            <img src="/images/fexness-logo.png" alt="Fexness" className="w-[220px] h-auto" />
+            <img src="/images/LOGO-.png" alt="DojiFx" className="w-[220px] h-auto" />
           </div>
           <h1 className="text-2xl font-bold text-gray-800">Welcome back</h1>
           <p className="text-gray-500 text-sm mt-1">Sign in to your trading account</p>
@@ -43,7 +43,7 @@ export default function Login() {
         </form>
         <p className="text-center text-sm text-gray-500 mt-6">
           Do not have an account?{" "}
-          <a href="https://portal.fexness.com/signup" className="text-gold-600 font-semibold hover:underline">Create one free</a>
+          <a href="https://portal.dojifx.com/signup" className="text-gold-600 font-semibold hover:underline">Create one free</a>
         </p>
       </div>
     </div>

@@ -243,7 +243,7 @@ export default function PropTrading() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Become a Funded Trader?</h2>
           <p className="text-gold-100 mb-8 text-lg">Join 2,500+ traders already earning with our capital. No personal risk, maximum opportunity.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="https://portal.fexness.com/signup" className="bg-white text-gold-600 font-bold px-10 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-xl">
+            <a href="https://portal.dojifx.com/signup" className="bg-white text-gold-600 font-bold px-10 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-xl">
               Start Your Challenge
             </a>
             <button className="border-2 border-white text-white font-bold px-10 py-4 rounded-xl hover:bg-white/10 transition-colors">
