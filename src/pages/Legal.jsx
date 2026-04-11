@@ -11,14 +11,14 @@ const TABS = [
     icon: AlertCircle,
     content: `RISK STATEMENT
 
-An investment in derivatives may mean investors may lose an amount even greater than their original investment. Anyone wishing to invest in any of the products mentioned in Fexness should seek their own financial or professional advice. Trading of securities, Forex, stock market, commodities, options and futures may not be suitable for everyone and involves the risk of losing part or all of your money. 
+An investment in derivatives may mean investors may lose an amount even greater than their original investment. Anyone wishing to invest in any of the products mentioned in DojiFx should seek their own financial or professional advice. Trading of securities, Forex, stock market, commodities, options and futures may not be suitable for everyone and involves the risk of losing part or all of your money. 
 
 Trading in the financial markets has large potential rewards, but also large potential risk. You must be aware of the risks and be willing to accept them in order to invest in the markets. Don't invest and trade with money which you can't afford to lose. Forex Trading are not allowed in some countries, before investing your money, make sure whether your country is allowing this or not.
 
-You are strongly advised to obtain independent financial, legal and tax advice before proceeding with any currency or spot metals trade. Nothing in this site should be read or construed as constituting advice on the part of Fexness Limited or any of its affiliates, directors, officers or employees.
+You are strongly advised to obtain independent financial, legal and tax advice before proceeding with any currency or spot metals trade. Nothing in this site should be read or construed as constituting advice on the part of DojiFx Limited or any of its affiliates, directors, officers or employees.
 
 RESTRICTED REGIONS
-Fexness Limited does not provide services for citizens/residents of USA, Venezuela, Ukraine, Iran, Cuba, Myanmar, North Korea, Sudan. The services of Fexness Limited are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
+DojiFx Limited does not provide services for citizens/residents of USA, Venezuela, Ukraine, Iran, Cuba, Myanmar, North Korea, Sudan. The services of DojiFx Limited are not intended for distribution to, or use by, any person in any country or jurisdiction where such distribution or use would be contrary to local law or regulation.
 
 Information on this site is not directed at residents in any country or jurisdiction where such distribution or use would be contrary to local law or regulations.`,
   },
@@ -28,7 +28,7 @@ Information on this site is not directed at residents in any country or jurisdic
     icon: FileText,
     content: `COMPANY REGISTRATION
 
-Fexness Limited is Registered in ANGUILLA Registry of (ARCA). 
+DojiFx Limited is Registered in ANGUILLA Registry of (ARCA). 
 
 Registration No: A000000352
 
@@ -37,7 +37,7 @@ Address: Anguilla, No. 5 Alloyd Building, Crocus Hill, AI-2640
 The objects of the Company are all subject matters not forbidden by International Business Companies (Amendment and Consolidation) Act, of the Laws of Anguilla, in particular but not exclusively all commercial, financial, lending, borrowing, trading, service activities and the participation in other enterprises as well as to provide brokerage, training and managed account services in currencies, commodities, indexes, CFDs and leveraged financial instruments.
 
 IMPORTANT TRADING POLICY UPDATE
-At Fexness, we allow High-Frequency Trading (HFT), arbitrage, or scalping with a duration of less than 180 seconds. However, we do permit scalping trades that last longer than 180 seconds and so, provided the client holds the position. Low spreads and zero commission depends on the product and account type. We provide an execution-only service. We do not provide investment advice or management services.
+At DojiFx, we allow High-Frequency Trading (HFT), arbitrage, or scalping with a duration of less than 180 seconds. However, we do permit scalping trades that last longer than 180 seconds and so, provided the client holds the position. Low spreads and zero commission depends on the product and account type. We provide an execution-only service. We do not provide investment advice or management services.
 
 IMPORTANT KYC UPDATE
 Users are allowed only one account per KYC. Creating multiple accounts under the same KYC is strictly prohibited. Please comply to avoid any issues!!
@@ -45,7 +45,7 @@ Users are allowed only one account per KYC. Creating multiple accounts under the
 In compliance with regulatory guidelines, we are not offering our services to clients or citizens residing in the United States, Valenzuela, Ukraine, Iran, Cuba, Myanmar, North Korea, Sudan.
 
 FRAUD WARNING
-It has come our attention that fraudulent websites are impersonating our brand using fake or lookalike domains. Please note that we do not promote any get rich quick schemes. Our official website is fexness.com. Stay vigilant & verify website URLs before engaging with any platform.`,
+It has come our attention that fraudulent websites are impersonating our brand using fake or lookalike domains. Please note that we do not promote any get rich quick schemes. Our official website is DojiFx.com. Stay vigilant & verify website URLs before engaging with any platform.`,
   },
   {
     key: 'terms',
@@ -56,7 +56,7 @@ It has come our attention that fraudulent websites are impersonating our brand u
 Last Updated: January 2024
 
 1. ACCEPTANCE OF TERMS
-By accessing and using Fexness's services, you confirm that you have read, understood, and agree to be bound by these Terms and Conditions.
+By accessing and using DojiFx's services, you confirm that you have read, understood, and agree to be bound by these Terms and Conditions.
 
 2. ELIGIBILITY
 You must be at least 18 years of age and legally capable of entering into a binding agreement. Services are not available to residents of restricted jurisdictions including USA, Venezuela, Ukraine, Iran, Cuba, Myanmar, North Korea, and Sudan.
@@ -78,10 +78,10 @@ Users are allowed only one account per KYC. Creating multiple accounts under the
 - Scalping trades lasting longer than 180 seconds are permitted provided the client holds the position
 
 7. INTELLECTUAL PROPERTY
-All content on Fexness platforms is proprietary. Reproduction without express written consent is prohibited.
+All content on DojiFx platforms is proprietary. Reproduction without express written consent is prohibited.
 
 8. LIMITATION OF LIABILITY
-Fexness shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.
+DojiFx shall not be liable for any indirect, incidental, or consequential damages arising from the use of our services.
 
 9. GOVERNING LAW
 These terms are governed by the laws of Anguilla.`,
@@ -133,10 +133,10 @@ We use essential and analytics cookies. You can manage cookie preferences in you
     icon: Shield,
     content: `ANTI-MONEY LAUNDERING (AML) POLICY
 
-This Anti-Money Laundering (AML) Policy outlines the procedures and internal controls implemented by Fexness to prevent money laundering, terrorist financing, fraud, and other financial crimes in connection with its forex trading services.
+This Anti-Money Laundering (AML) Policy outlines the procedures and internal controls implemented by DojiFx to prevent money laundering, terrorist financing, fraud, and other financial crimes in connection with its forex trading services.
 
 COMPLIANCE COMMITMENT
-Fexness is committed to full compliance with applicable AML and Counter-Terrorist Financing (CTF) laws and regulations in the jurisdictions where it operates. Fexness complies with all applicable AML/CTF legislation and regulatory requirements, including those imposed by its licensing authority depending on jurisdiction.
+DojiFx is committed to full compliance with applicable AML and Counter-Terrorist Financing (CTF) laws and regulations in the jurisdictions where it operates. DojiFx complies with all applicable AML/CTF legislation and regulatory requirements, including those imposed by its licensing authority depending on jurisdiction.
 
 DEFINITIONS
 Money Laundering – The process of concealing the origin of illegally obtained funds to make them appear legitimate.
@@ -144,7 +144,7 @@ Terrorist Financing – The provision or collection of funds with the intention 
 Politically Exposed Person (PEP) – An individual who holds or has held a prominent public function.
 
 RISK-BASED APPROACH
-Fexness applies a risk-based approach to AML compliance by:
+DojiFx applies a risk-based approach to AML compliance by:
 - Assessing customer risk profiles
 - Monitoring geographic risk
 - Evaluating transaction patterns
@@ -152,7 +152,7 @@ Fexness applies a risk-based approach to AML compliance by:
 Clients are categorized as Low, Medium, or High risk.
 
 CUSTOMER DUE DILIGENCE (CDD)
-Before establishing a business relationship, Fexness shall:
+Before establishing a business relationship, DojiFx shall:
 
 1. Individual Clients
 - Obtain full name, date of birth, nationality
@@ -180,7 +180,7 @@ EDD measures may include:
 - Increased transaction monitoring
 
 ONGOING MONITORING
-Fexness continuously monitors:
+DojiFx continuously monitors:
 - Trading activity
 - Deposit and withdrawal patterns
 - Account behavior inconsistencies
@@ -189,41 +189,41 @@ Automated systems and manual reviews are used to detect suspicious activity.
 
 SUSPICIOUS ACTIVITY REPORTING (SAR)
 If suspicious activity is identified:
-- The matter is escalated to the Fexness employed AML Compliance Officer
+- The matter is escalated to the DojiFx employed AML Compliance Officer
 - An internal investigation is conducted
 - Where required, a Suspicious Activity Report (SAR) is filed with the relevant authority
 Employees are strictly prohibited from "tipping off" clients about investigations.
 
 RECORD KEEPING
-Fexness retains the following records for a minimum of 5–7 years (or as required by regulation):
+DojiFx retains the following records for a minimum of 5–7 years (or as required by regulation):
 - Client identification documents
 - Transaction records
 - Internal reports and SAR documentation
 - Communication records
 
 EMPLOYEE TRAINING
-All employees of Fexness will receive:
+All employees of DojiFx will receive:
 - AML/CTF training upon hiring
 - Annual refresher training
 - Guidance on identifying suspicious activity
 Training records are maintained.
 
 AML COMPLIANCE OFFICER
-Fexness appoints a qualified AML Compliance Officer responsible for:
+DojiFx appoints a qualified AML Compliance Officer responsible for:
 - Implementing AML procedures
 - Monitoring compliance
 - Reporting to regulatory authorities
 - Updating AML policies
 
 SANCTIONS COMPLIANCE
-Fexness screens clients against:
+DojiFx screens clients against:
 - International sanctions lists
 - Politically exposed persons (PEP) databases
 - Adverse media sources
 Accounts linked to sanctioned individuals or entities will be rejected or frozen in accordance with legal requirements.
 
 POLICY REVIEW
-This AML Policy is reviewed by Fexness at least annually or whenever there are significant regulatory changes.`,
+This AML Policy is reviewed by DojiFx at least annually or whenever there are significant regulatory changes.`,
   },
 ]
 

@@ -51,7 +51,7 @@ const CHANNELS = [
     desc: 'Send us an email — we respond within 4 business hours.', 
     action: 'Email Support', 
     color: 'bg-purple-50 text-purple-600',
-    href: 'mailto:support@fexness.com',
+    href: 'mailto:support@dojifx.com',
     onClick: null
   },
 ]
@@ -152,8 +152,8 @@ export default function Support() {
             </div>
             <h3 className="font-bold mb-2">Email Address</h3>
             <p className="text-gray-600 text-sm mb-3">Response within 4 hours</p>
-            <a href="mailto:support@fexness.com" className="text-blue-600 font-semibold hover:text-blue-700">
-              support@fexness.com
+            <a href="mailto:support@dojifx.com" className="text-blue-600 font-semibold hover:text-blue-700">
+              support@dojifx.com
             </a>
           </div>
           

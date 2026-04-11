@@ -5,9 +5,9 @@ import Section from '../components/Section'
 const POSTS = [
   { tag: 'Strategy', title: '5 Price Action Setups Every Trader Should Know', date: 'Feb 26, 2026', img: 'https://picsum.photos/seed/blog1/800/500', read: '5 min' },
   { tag: 'Platform Tips', title: 'How to Set Alerts in MT5 — Step-by-Step Guide', date: 'Feb 24, 2026', img: 'https://picsum.photos/seed/blog2/800/500', read: '3 min' },
-  { tag: 'Withdrawals', title: 'Complete Guide to Withdrawing from Fexness', date: 'Feb 22, 2026', img: 'https://picsum.photos/seed/blog3/800/500', read: '4 min' },
+  { tag: 'Withdrawals', title: 'Complete Guide to Withdrawing from DojiFx', date: 'Feb 22, 2026', img: 'https://picsum.photos/seed/blog3/800/500', read: '4 min' },
   { tag: 'Education', title: 'Understanding Leverage: a Beginner Guide', date: 'Feb 20, 2026', img: 'https://picsum.photos/seed/blog4/800/500', read: '6 min' },
-  { tag: 'Broker Updates', title: 'Fexness Adds New Islamic Account Tier', date: 'Feb 18, 2026', img: 'https://picsum.photos/seed/blog5/800/500', read: '2 min' },
+  { tag: 'Broker Updates', title: 'DojiFx Adds New Islamic Account Tier', date: 'Feb 18, 2026', img: 'https://picsum.photos/seed/blog5/800/500', read: '2 min' },
   { tag: 'Psychology', title: 'Why 90% of Traders Lose — and How to Be Different', date: 'Feb 15, 2026', img: 'https://picsum.photos/seed/blog6/800/500', read: '7 min' },
 ]
 

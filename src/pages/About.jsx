@@ -21,7 +21,7 @@ const STATS = [
 ]
 
 const MILESTONES = [
-  { year: '2020', title: 'Company Founded', desc: 'Fexness was established with a vision to democratize forex trading and provide professional-grade tools to all traders.' },
+  { year: '2020', title: 'Company Founded', desc: 'DojiFx was established with a vision to democratize forex trading and provide professional-grade tools to all traders.' },
   { year: '2021', title: 'Platform Launch', desc: 'Launched our advanced trading platform with lightning-fast execution and competitive spreads.' },
   { year: '2022', title: 'Global Expansion', desc: 'Expanded services to 175+ countries with multilingual support and localized payment methods.' },
   { year: '2023', title: 'Regulatory License', desc: 'Obtained regulatory authorization ensuring compliance and client protection.' },
@@ -39,11 +39,11 @@ const TEAM = [
 
 It is a pleasure to be here with you.
 
-When we founded Fexness, our vision was simple yet ambitious: to create a trading environment built on transparency, technology, and trust. We believed that financial markets should be accessible, fair, and efficient for everyone — not just for a privileged few.
+When we founded DojiFx, our vision was simple yet ambitious: to create a trading environment built on transparency, technology, and trust. We believed that financial markets should be accessible, fair, and efficient for everyone — not just for a privileged few.
 
 Over the years, the financial industry has evolved dramatically. Technology has reshaped the way people trade, invest, and manage their wealth. But while tools and platforms have changed, one thing remains constant — trust is the foundation of everything we do.
 
-At Fexness, we have always prioritized three core principles:
+At DojiFx, we have always prioritized three core principles:
 
 First, transparency.
 Clients deserve clarity — in pricing, execution, and communication. We believe long-term relationships are built when clients fully understand how and why things work.
@@ -71,7 +71,7 @@ And to always put our clients first.
 
 The future of trading will not simply be about faster systems or larger volumes. It will be about smarter solutions, stronger trust, and meaningful impact.
 
-At Fexness, we are ready for that future.
+At DojiFx, we are ready for that future.
 
 Thank you.`
   },
@@ -84,7 +84,7 @@ Thank you.`
 
 As Chief Operating Officer, my focus is simple: execution. Vision defines where we want to go — operations determine whether we actually get there.
 
-At Fexness, operational excellence is not just about efficiency. It is about reliability, resilience, and responsibility. In a global trading environment where milliseconds matter and trust is everything, our systems, processes, and people must perform flawlessly — every single day.
+At DojiFx, operational excellence is not just about efficiency. It is about reliability, resilience, and responsibility. In a global trading environment where milliseconds matter and trust is everything, our systems, processes, and people must perform flawlessly — every single day.
 
 Our role in operations is to ensure three critical pillars remain strong:
 
@@ -109,7 +109,7 @@ Our responsibility is to ensure growth does not compromise quality.
 
 The future of financial services will belong to organizations that combine innovation with operational discipline. Ambition must be supported by structure. Speed must be supported by control. Expansion must be supported by resilience.
 
-At Fexness, we are committed to building operations that are scalable, secure, and sustainable — not just for today, but for the long term.
+At DojiFx, we are committed to building operations that are scalable, secure, and sustainable — not just for today, but for the long term.
 
 Thank you to our teams for your dedication.
 Thank you to our partners for your collaboration.
@@ -130,7 +130,7 @@ It's an honor to speak with you.
 
 Technology is the foundation of modern financial markets. Every trade executed, every price streamed, every risk calculation performed — it all depends on systems that must operate with speed, precision, and resilience.
 
-As Chief Technology Officer at Fexness, my mission is clear: build technology that is fast, reliable, scalable, and secure — without compromise.
+As Chief Technology Officer at DojiFx, my mission is clear: build technology that is fast, reliable, scalable, and secure — without compromise.
 
 In our industry, milliseconds matter. Downtime is not an inconvenience; it is a risk. Latency is not just a metric; it is an experience. That is why our engineering philosophy is built around three principles:
 
@@ -155,7 +155,7 @@ Our goal is not simply to adopt new technologies, but to shape them in ways that
 
 The future of fintech will belong to organizations that combine innovation with discipline, experimentation with governance, and ambition with accountability.
 
-At Fexness, we are building that future — line by line, system by system, day by day.
+At DojiFx, we are building that future — line by line, system by system, day by day.
 
 To our technology teams: thank you for your expertise and dedication.
 To our partners: thank you for your collaboration.
@@ -178,7 +178,7 @@ In financial services, innovation often takes center stage. Technology advances.
 
 Compliance is not simply about rules and regulations. It is about trust. It is about integrity. It is about ensuring that every action we take aligns with both legal standards and ethical responsibility.
 
-At Fexness, compliance is not treated as a control function that operates in isolation. It is embedded into our culture, our processes, and our decision-making frameworks.
+At DojiFx, compliance is not treated as a control function that operates in isolation. It is embedded into our culture, our processes, and our decision-making frameworks.
 
 We focus on three key pillars:
 
@@ -205,7 +205,7 @@ To our teams: thank you for your vigilance and professionalism.
 To our partners and regulators: thank you for your collaboration and guidance.
 And to our clients: thank you for placing your trust in us.
 
-At Fexness, compliance is not just a requirement — it is a commitment.
+At DojiFx, compliance is not just a requirement — it is a commitment.
 
 Thank you.`
   },
@@ -221,7 +221,7 @@ export default function About() {
   return (
     <div>
       <PageHero
-        title="About Fexness"
+        title="About DojiFx"
         subtitle="Empowering traders worldwide with professional-grade technology and transparent pricing."
         image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=600&fit=crop"
       />
@@ -251,7 +251,7 @@ export default function About() {
           </div>
           <div className="space-y-4">
             <p className="text-gray-600 leading-relaxed">
-              Founded with a vision to democratize forex trading, Fexness emerged from a simple belief: every trader deserves access to professional-grade tools, transparent pricing, and exceptional support.
+              Founded with a vision to democratize forex trading, DojiFx emerged from a simple belief: every trader deserves access to professional-grade tools, transparent pricing, and exceptional support.
             </p>
             <p className="text-gray-600 leading-relaxed">
               What started as a mission to provide zero-spread trading has evolved into a comprehensive trading ecosystem. Today, we serve traders across 175 countries, offering access to 100+ instruments with lightning-fast execution and industry-leading technology.
@@ -304,7 +304,7 @@ export default function About() {
       </Section>
 
       {/* Team */}
-      <Section title="Meet the Leadership" subtitle="Experienced professionals driving Fexness forward" gray>
+      <Section title="Meet the Leadership" subtitle="Experienced professionals driving DojiFx forward" gray>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {TEAM.map((member, i) => (
             <RevealCard key={i} delay={i * 100}>

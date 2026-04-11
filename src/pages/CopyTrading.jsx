@@ -225,7 +225,7 @@ export default function CopyTrading() {
       <section className="bg-gold-600 text-white py-14 text-center">
         <h2 className="text-3xl font-bold mb-4">Ready to Start Copy Trading?</h2>
         <p className="text-gold-100 mb-8">Join thousands of traders already copying successful strategies. No experience needed.</p>
-        <a href="https://portal.fexness.com/signup" className="bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">Get Started Now</a>
+        <a href="https://portal.dojifx.com/signup" className="bg-white text-gold-600 font-semibold px-8 py-3 rounded-xl hover:bg-gray-100 transition-colors">Get Started Now</a>
       </section>
     </div>
   )

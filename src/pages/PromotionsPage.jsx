@@ -53,7 +53,7 @@ export default function PromotionsPage() {
     <div>
       <PageHero
         title="Promotions & Bonuses"
-        subtitle="Boost your trading capital with exclusive Fexness offers."
+        subtitle="Boost your trading capital with exclusive DojiFx offers."
         image="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=1200&h=600&fit=crop"
       />
 
@@ -102,7 +102,7 @@ export default function PromotionsPage() {
                       </li>
                     ))}
                   </ul>
-                  <a href="https://portal.fexness.com/signup" className={`block text-center py-3 rounded-xl font-semibold text-sm transition-colors ${promo.highlight ? 'bg-gold-500 text-white hover:bg-gold-600' : 'border border-gold-500 text-gold-600 hover:bg-gold-50'}`}>
+                  <a href="https://portal.dojifx.com/signup" className={`block text-center py-3 rounded-xl font-semibold text-sm transition-colors ${promo.highlight ? 'bg-gold-500 text-white hover:bg-gold-600' : 'border border-gold-500 text-gold-600 hover:bg-gold-50'}`}>
                     Claim Offer
                   </a>
                 </div>
@@ -117,7 +117,7 @@ export default function PromotionsPage() {
         <div className="max-w-4xl mx-auto">
           <h4 className="font-bold text-gray-800 mb-3 text-base">Terms & Conditions</h4>
           <p className="text-gray-700 text-sm leading-relaxed">
-            All promotions are subject to Fexness's standard Terms and Conditions. <strong>30% Bonus Policy:</strong> Requires 3 lots trading to activate conditions. Withdrawal allowed only after completing 10 lots trading volume. Bonus funds are not withdrawable and can be lost in trading. <strong>Referral Program:</strong> $12 commission per lot with 2 business days processing time. <strong>Withdrawal Conditions:</strong> May require completion of minimum trading volume (5 lots in certain promotion cases) before profit withdrawal. Some promotions may require removal of leverage conditions depending on account type. Fexness reserves the right to modify, suspend or cancel any promotion at any time without prior notice.
+            All promotions are subject to DojiFx's standard Terms and Conditions. <strong>30% Bonus Policy:</strong> Requires 3 lots trading to activate conditions. Withdrawal allowed only after completing 10 lots trading volume. Bonus funds are not withdrawable and can be lost in trading. <strong>Referral Program:</strong> $12 commission per lot with 2 business days processing time. <strong>Withdrawal Conditions:</strong> May require completion of minimum trading volume (5 lots in certain promotion cases) before profit withdrawal. Some promotions may require removal of leverage conditions depending on account type. DojiFx reserves the right to modify, suspend or cancel any promotion at any time without prior notice.
           </p>
         </div>
       </section>

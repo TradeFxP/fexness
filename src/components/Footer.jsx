@@ -17,7 +17,7 @@ const COLS = [
     title: "Company",
     links: [
       { label: "About Us", to: "/about" },
-      { label: "Why Fexness", to: "/why-us" },
+      { label: "Why DojiFx", to: "/why-us" },
       { label: "Regulation", to: "/regulation" },
       { label: "IB Program", to: "/ib" },
       { label: "Promotions", to: "/promotions" },
@@ -70,18 +70,18 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-1 lg:col-span-1">
             <div className="mb-4">
-              <img src="/images/fexness-logo.png" alt="Fexness Logo" className="w-[220px] h-auto" />
+              <img src="/images/footer-logo.png" alt="DojiFx Logo" className="w-[220px] h-auto" />
             </div>
             <p className="text-gray-400 text-xs leading-relaxed mb-4">
               A globally recognized forex & CFD broker offering competitive spreads, fast execution, and a secure trading environment.
             </p>
             <div className="flex gap-3 mb-4">
               {[
-                { icon: Linkedin, href: "https://linkedin.com/company/fexness" },
-                { icon: Twitter, href: "https://x.com/fexnessofficial" },
-                { icon: Facebook, href: "https://www.facebook.com/fexnessofficial" },
-                { icon: Youtube, href: "https://www.youtube.com/@Fexness" },
-                { icon: Send, href: "https://t.me/fexnesstech" },
+                { icon: Linkedin, href: "https://linkedin.com/company/DojiFx" },
+                { icon: Twitter, href: "https://x.com/DojiFxofficial" },
+                { icon: Facebook, href: "https://www.facebook.com/DojiFxofficial" },
+                { icon: Youtube, href: "https://www.youtube.com/@DojiFx" },
+                { icon: Send, href: "https://t.me/DojiFxtech" },
               ].map(({ icon: Icon, href }, i) => (
                 <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-gray-800 hover:bg-gold-500 text-gray-400 hover:text-white transition-all">
                   <Icon className="w-4 h-4" />
@@ -154,7 +154,7 @@ export default function Footer() {
           <div className="flex gap-3">
             <Phone className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
             <div>
-              <div className="text-white text-xs font-bold mb-0.5">Fexness Hotline</div>
+              <div className="text-white text-xs font-bold mb-0.5">DojiFx Hotline</div>
               <a href="tel:+447853329918" className="text-gray-400 hover:text-gold-400 text-xs transition-colors">+44 7853 329918</a>
             </div>
           </div>
@@ -162,7 +162,7 @@ export default function Footer() {
             <Mail className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
             <div>
               <div className="text-white text-xs font-bold mb-0.5">Email Support</div>
-              <a href="mailto:support@fexness.com" className="text-gray-400 hover:text-gold-400 text-xs transition-colors">support@fexness.com</a>
+              <a href="mailto:support@dojifx.com" className="text-gray-400 hover:text-gold-400 text-xs transition-colors">support@dojifx.com</a>
             </div>
           </div>
         </div>
@@ -182,7 +182,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-4">
             <div className="text-xs text-gray-400">
               <p className="flex flex-wrap items-center justify-center md:justify-start gap-2">
-                <span>© {new Date().getFullYear()} <strong className="text-white">Fexness Limited</strong>. All rights reserved.</span>
+                <span>© {new Date().getFullYear()} <strong className="text-white">DojiFx Limited</strong>. All rights reserved.</span>
                 <span className="hidden md:inline text-gray-600">|</span>
                 <span>Registration No. <strong className="text-gold-400">A000000352</strong></span>
                 <span className="hidden md:inline text-gray-600">|</span>

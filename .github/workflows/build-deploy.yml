@@ -30,8 +30,8 @@ jobs:
         file: Dockerfile
         push: true
         tags: |
-          registry.nafabarter.com/fexness:${{ github.sha }}
-          registry.nafabarter.com/fexness:latest
+          registry.nafabarter.com/DojiFx:${{ github.sha }}
+          registry.nafabarter.com/DojiFx:latest
 
     - name: Redeploy Stack in Portainer
       run: | 

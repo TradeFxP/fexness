@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 
 const slides = [
-  {title: 'Fexness - Global Market Leaders', subtitle: 'Professional trading solutions and education', image: 'https://picsum.photos/seed/hero1/1600/700'},
+  {title: 'DojiFx - Global Market Leaders', subtitle: 'Professional trading solutions and education', image: 'https://picsum.photos/seed/hero1/1600/700'},
   {title: 'Masterful market wisdom', subtitle: 'Daily research reports and strategy guides', image: 'https://picsum.photos/seed/hero2/1600/700'},
   {title: 'Open a Live / Demo Forex account', subtitle: 'Quick 5-minute sign-up & KYC', image: 'https://picsum.photos/seed/hero3/1600/700'}
 ]
