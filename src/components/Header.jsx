@@ -132,7 +132,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src="/images/LOGO-.png" alt="DojiFx Logo" className="w-[180px] h-auto" />
+            <img src="/images/header-logo.png" alt="DojiFx Logo" className="w-[180px] h-auto" />
           </Link>
 
           {/* Desktop Nav */}
