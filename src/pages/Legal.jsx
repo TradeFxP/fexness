@@ -30,8 +30,6 @@ Information on this site is not directed at residents in any country or jurisdic
 
 DojiFx Limited is Registered in ANGUILLA Registry of (ARCA). 
 
-Registration No: A000000352
-
 Address: Anguilla, No. 5 Alloyd Building, Crocus Hill, AI-2640
 
 The objects of the Company are all subject matters not forbidden by International Business Companies (Amendment and Consolidation) Act, of the Laws of Anguilla, in particular but not exclusively all commercial, financial, lending, borrowing, trading, service activities and the participation in other enterprises as well as to provide brokerage, training and managed account services in currencies, commodities, indexes, CFDs and leveraged financial instruments.
