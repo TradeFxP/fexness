@@ -184,7 +184,7 @@ export default function Footer() {
               <p className="flex flex-wrap items-center justify-center md:justify-start gap-2">
                 <span>© {new Date().getFullYear()} <strong className="text-white">DojiFx Limited</strong>. All rights reserved.</span>
                 <span className="hidden md:inline text-gray-600">|</span>
-                <span>Regulated & Licensed in <strong className="text-white">Anguilla</strong></span>
+                <span>Proposed & Licensed in <strong className="text-white">Anguilla</strong></span>
               </p>
             </div>
             <div className="flex gap-4 text-xs">
