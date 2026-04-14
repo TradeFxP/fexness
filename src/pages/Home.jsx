@@ -963,13 +963,13 @@ export default function Home() {
               </div>
               <div className="text-gray-700 leading-relaxed space-y-3">
                 <p>
-                  <strong className="text-gray-900">DojiFx Limited</strong> is Registered in ANGUILLA Registry of (ARCA).
+                  <strong className="text-gray-900">DojiFx Limited</strong> is Proposed in ANGUILLA Registry of (ARCA).
                 </p>
                 <div className="bg-gray-50 rounded-lg p-4 space-y-2">
-                  <p className="flex items-center gap-2">
+                  {/* <p className="flex items-center gap-2">
                     <span className="font-semibold text-gray-900">Registration No:</span>
                     <span className="text-gold-600 font-bold">A000000352</span>
-                  </p>
+                  </p> */}
                   <p className="flex items-start gap-2">
                     <span className="font-semibold text-gray-900 flex-shrink-0">Address:</span>
                     <span>Anguilla, No. 5 Alloyd Building, Crocus Hill, AI-2640</span>
