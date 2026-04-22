@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { BarChart2, Linkedin, Twitter, Facebook, Instagram, Youtube, Mail, MapPin, Phone, Send } from "lucide-react";
+import { IconTikTok } from "../icons.jsx";
 
 const COLS = [
 	{
@@ -98,6 +99,14 @@ export default function Footer() {
 									<Icon className="w-4 h-4" />
 								</a>
 							))}
+							<a
+								href="https://www.tiktok.com/@dojifxforex"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="p-2 rounded-lg bg-gray-800 hover:bg-gold-500 text-gray-400 hover:text-white transition-all"
+							>
+								<IconTikTok className="w-4 h-4" />
+							</a>
 						</div>
 					</div>
 
