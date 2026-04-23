@@ -102,7 +102,7 @@ export default function Footer() {
 							<a
 								href="https://www.tiktok.com/@dojifxforex"
 								target="_blank"
-								rel="noopener noreferrer"
+								rel="noopener noreferrer" 
 								className="p-2 rounded-lg bg-gray-800 hover:bg-gold-500 text-gray-400 hover:text-white transition-all"
 							>
 								<IconTikTok className="w-4 h-4" />
