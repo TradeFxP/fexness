@@ -20,7 +20,7 @@ const PROMOS = [
     desc: 'Get 30% bonus on your first deposit. Boost your trading capital instantly with our generous welcome offer.',
     img: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=350&fit=crop',
     highlight: true,
-    terms: ['30% bonus on first deposit', '3 lots trading required to activate', 'Complete 10 lots to withdraw', 'Bonus not withdrawable - can be lost in trading'],
+    terms: ['30% bonus on first deposit', 'Bonus not withdrawable - can be lost in trading'],
   },
   {
     badge: 'Deposit',
@@ -28,7 +28,7 @@ const PROMOS = [
     desc: 'Enjoy 30% bonus on every deposit you make. Continuous rewards for loyal traders to maximize trading potential.',
     img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=350&fit=crop',
     highlight: true,
-    terms: ['30% bonus on all deposits', '3 lots trading required to activate', 'Complete 10 lots to withdraw', 'Bonus not withdrawable - can be lost in trading'],
+    terms: ['30% bonus on all deposits', 'Bonus not withdrawable - can be lost in trading'],
   },
   {
     badge: 'Referral',
