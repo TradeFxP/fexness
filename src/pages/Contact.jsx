@@ -1,6 +1,6 @@
 import React from "react";
-import { IconTikTok, IconX, IconTelegram } from "../icons.jsx";
-import { MapPin, Mail, Clock, Linkedin, Facebook, Youtube, Phone } from "lucide-react";
+import { MapPin, Mail, Clock, Phone } from "lucide-react";
+import { SOCIAL_LINKS } from "../data/socialMedia.js";
 import PageHero from "../components/PageHero";
 import Section from "../components/Section";
 
@@ -150,19 +150,7 @@ export default function Contact() {
 						</div>
 
 						<div className="flex flex-wrap gap-3 pt-2">
-							{[
-								{ Icon: Linkedin, href: "https://linkedin.com/company/DojiFx", color: "#0077B5", label: "LinkedIn" },
-								{ Icon: IconX, href: "https://x.com/DojifxC72364", color: "#000000", label: "Twitter" },
-								{
-									Icon: Facebook,
-									href: "https://www.facebook.com/profile.php?id=61571000288404",
-									color: "#1877F2",
-									label: "Facebook",
-								},
-								{ Icon: Youtube, href: "https://www.youtube.com/@DojiFX-k2q5j", color: "#FF0000", label: "YouTube" },
-								{ Icon: IconTikTok, href: "https://www.tiktok.com/@dojifxforex", color: "#010101", label: "TikTok" },
-								{ Icon: IconTelegram, href: "https://t.me/DojiFxtech", color: "#2CA5E0", label: "Telegram" },
-							].map(({ Icon, href, color, label }) => (
+							{SOCIAL_LINKS.map(({ Icon, href, color, label }) => (
 								<div key={label} className="relative group">
 									<a
 										href={href}

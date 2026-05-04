@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BarChart2, Linkedin, Facebook, Youtube, Mail, MapPin } from "lucide-react";
-import { IconTikTok, IconX, IconTelegram, IconWhatsApp } from "../icons.jsx";
+import { Mail, MapPin } from "lucide-react";
+import { IconWhatsApp } from "../icons.jsx";
+import { SOCIAL_LINKS } from "../data/socialMedia.js";
 
 const COLS = [
 	{
@@ -82,24 +83,7 @@ export default function Footer() {
 							trading environment.
 						</p>
 						<div className="flex flex-nowrap gap-2 mb-4">
-							{[
-								{
-									Icon: Linkedin,
-									href: "https://www.linkedin.com/company/dojifx",
-									color: "#0077B5",
-									label: "LinkedIn",
-								},
-								{ Icon: IconX, href: "https://x.com/DojifxC72364", color: "#000000", label: "Twitter" },
-								{
-									Icon: Facebook,
-									href: "https://www.facebook.com/profile.php?id=61571000288404",
-									color: "#1877F2",
-									label: "Facebook",
-								},
-								{ Icon: Youtube, href: "https://www.youtube.com/@DojiFX-k2q5j", color: "#FF0000", label: "YouTube" },
-								{ Icon: IconTikTok, href: "https://www.tiktok.com/@dojifxforex", color: "#010101", label: "TikTok" },
-								{ Icon: IconTelegram, href: "https://t.me/DojiFxtech", color: "#2CA5E0", label: "Telegram" },
-							].map(({ Icon, href, color, label }) => (
+						{SOCIAL_LINKS.map(({ Icon, href, color, label }) => (
 								<div key={label} className="relative group">
 									<a
 										href={href}
