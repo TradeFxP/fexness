@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { BarChart2, Linkedin, Twitter, Facebook, Instagram, Youtube, Mail, MapPin, Phone, Send } from "lucide-react";
-import { IconTikTok } from "../icons.jsx";
+import { BarChart2, Linkedin, Facebook, Youtube, Mail, MapPin } from "lucide-react";
+import { IconTikTok, IconX, IconTelegram, IconWhatsApp } from "../icons.jsx";
 
 const COLS = [
 	{
@@ -67,9 +67,9 @@ export default function Footer() {
 	return (
 		<footer className="bg-gray-900 text-gray-300">
 			<div className="max-w-7xl mx-auto px-4 py-14">
-				<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 mb-12">
+				<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 mb-12">
 					{/* Brand Column */}
-					<div className="col-span-2 md:col-span-1 lg:col-span-1">
+					<div className="col-span-2 md:col-span-1 lg:col-span-2">
 						<div className="mb-4">
 							<img
 								src="/images/footer-logo.png"
@@ -81,32 +81,46 @@ export default function Footer() {
 							A globally recognized forex & CFD broker offering competitive spreads, fast execution, and a secure
 							trading environment.
 						</p>
-						<div className="flex gap-3 mb-4">
+						<div className="flex flex-nowrap gap-2 mb-4">
 							{[
-								{ icon: Linkedin, href: "https://www.linkedin.com/company/dojifx" },
-								{ icon: Twitter, href: "https://x.com/DojifxC72364" },
-								{ icon: Facebook, href: "https://www.facebook.com/profile.php?id=61571000288404" },
-								{ icon: Youtube, href: "https://www.youtube.com/@DojiFX-k2q5j" },
-								// { icon: Send, href: "https://t.me/DojiFxtech" },
-							].map(({ icon: Icon, href }, i) => (
-								<a
-									key={i}
-									href={href}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="p-2 rounded-lg bg-gray-800 hover:bg-gold-500 text-gray-400 hover:text-white transition-all"
-								>
-									<Icon className="w-4 h-4" />
-								</a>
+								{
+									Icon: Linkedin,
+									href: "https://www.linkedin.com/company/dojifx",
+									color: "#0077B5",
+									label: "LinkedIn",
+								},
+								{ Icon: IconX, href: "https://x.com/DojifxC72364", color: "#000000", label: "Twitter" },
+								{
+									Icon: Facebook,
+									href: "https://www.facebook.com/profile.php?id=61571000288404",
+									color: "#1877F2",
+									label: "Facebook",
+								},
+								{ Icon: Youtube, href: "https://www.youtube.com/@DojiFX-k2q5j", color: "#FF0000", label: "YouTube" },
+								{ Icon: IconTikTok, href: "https://www.tiktok.com/@dojifxforex", color: "#010101", label: "TikTok" },
+								{ Icon: IconTelegram, href: "https://t.me/DojiFxtech", color: "#2CA5E0", label: "Telegram" },
+							].map(({ Icon, href, color, label }) => (
+								<div key={label} className="relative group">
+									<a
+										href={href}
+										target="_blank"
+										rel="noopener noreferrer"
+										aria-label={label}
+										className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-white transition-all block"
+										onMouseEnter={(e) => {
+											e.currentTarget.style.backgroundColor = color;
+										}}
+										onMouseLeave={(e) => {
+											e.currentTarget.style.backgroundColor = "";
+										}}
+									>
+										<Icon className="w-4 h-4" />
+									</a>
+									<span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-gray-700 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity">
+										{label}
+									</span>
+								</div>
 							))}
-							<a
-								href="https://www.tiktok.com/@dojifxforex"
-								target="_blank"
-								rel="noopener noreferrer" 
-								className="p-2 rounded-lg bg-gray-800 hover:bg-gold-500 text-gray-400 hover:text-white transition-all"
-							>
-								<IconTikTok className="w-4 h-4" />
-							</a>
 						</div>
 					</div>
 
@@ -178,11 +192,13 @@ export default function Footer() {
 						</div>
 					))}
 					<div className="flex gap-3">
-						<Phone className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
+						<IconWhatsApp className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
 						<div>
 							<div className="text-white text-xs font-bold mb-0.5">DojiFx Hotline</div>
 							<a
-								href="tel:+447878755178"
+								href="https://wa.me/447878755178"
+								target="_blank"
+								rel="noopener noreferrer"
 								className="text-gray-400 hover:text-gold-400 text-xs transition-colors"
 							>
 								+44 7878 755178
